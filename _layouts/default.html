@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include head.html %}
+
+<body>
+
+  {% include sidebar.html %}
+
+  <div class="content container">
+
+    {{ content }}
+
+    {% include subscribe.html %}
+
+    {% include comments.html %}
+    
+  </div>
+
+
+  {% include analytics.html %}
+
+</body>
+</html>

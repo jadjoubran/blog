@@ -1,0 +1,14 @@
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = 'http://blog.jadjoubran.io';
+this.page.identifier = "{{ site.disqusid }}{{ page.url | replace:'index.html','' }}";
+};
+
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//jadjoubran.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
