@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Welcome
+title: Laravel Angular Material Starter v3.1
 ---
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+[Laravel Angular Material Starter](http://laravel-angular.io){:target="_blank"} has reached version 3.1  
+I would like to thank the contributors and early users for making it possible.
 
-### Built on Poole
+### What's new?
 
 Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
 
@@ -16,7 +17,7 @@ Poole is the Jekyll Butler, serving as an upstanding and effective foundation fo
 * Related posts (time-based, because Jekyll) below each post
 * Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
 
-### Hyde features
+### Upgrade Guide?
 
 In addition to the features of Poole, Hyde adds the following:
 
@@ -26,7 +27,7 @@ In addition to the features of Poole, Hyde adds the following:
 
 [Head to the readme](https://github.com/poole/hyde#readme) to learn more.
 
-### Browser support
+### What's next?
 
 Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
 

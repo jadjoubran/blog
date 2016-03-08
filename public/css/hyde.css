@@ -31,7 +31,7 @@
  * Update the foundational and global aspects of the page.
  */
 
-html {
+ html {
   font-family: Lato, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
@@ -53,7 +53,7 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
-.sidebar {
+ .sidebar {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 15rem;
     text-align: left;
   }
 }
@@ -84,7 +84,7 @@ html {
   color: #fff;
   margin-top: 0;
   font-family: Lato, serif;
-  font-size: 3.25rem;
+  font-size: 2.25rem;
 }
 
 /* Sidebar nav */
@@ -109,11 +109,11 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+ @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+    top: 3rem;
     left:   1rem;
   }
 }
@@ -125,7 +125,7 @@ a.sidebar-nav-item:focus {
  * with a 25%-wide `.sidebar`.
  */
 
-.content {
+ .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
 }
@@ -152,7 +152,7 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48em) {
+ @media (min-width: 48em) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
@@ -179,10 +179,10 @@ a.sidebar-nav-item:focus {
  * within blog posts. To use, add the class of your choosing to the `body`.
  */
 
-/* Base16 (http://chriskempson.github.io/base16/#default) */
+ /* Base16 (http://chriskempson.github.io/base16/#default) */
 
-/* Red */
-.theme-base-08 .sidebar {
+ /* Red */
+ .theme-base-08 .sidebar {
   background-color: #ac4142;
 }
 .theme-base-08 .content a,
@@ -251,4 +251,19 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+.sidebar-footer{
+  font-size: 14px;
+}
+
+@media (min-width: 48em){
+  .sidebar-footer {
+    position: absolute;
+    bottom: 1rem;
+  }
+
+  .sidebar-footer p{
+    margin-left: 1rem;
+  }
 }
