@@ -32,7 +32,7 @@
  */
 
  html {
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-family: PT Serif, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -45,6 +45,16 @@
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sidebar-footer,
+.post-date{
+  font-family: 'PT Sans', sans-serif;
+}
 
 /*
  * Sidebar
@@ -65,7 +75,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 15rem;
+    width: 17rem;
     text-align: left;
   }
 }
@@ -73,6 +83,11 @@
 /* Sidebar links */
 .sidebar a {
   color: #fff;
+}
+
+.sidebar .lead{
+  font-size: 1rem;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .sidebar-main-title:hover{
@@ -83,8 +98,8 @@
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: Lato, serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
+  font-family: 'PT Sans', sans-serif;
 }
 
 /* Sidebar nav */
@@ -126,7 +141,7 @@ a.sidebar-nav-item:focus {
  */
 
  .content {
-  padding-top:    4rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
 }
 
@@ -135,6 +150,7 @@ a.sidebar-nav-item:focus {
     max-width: 38rem;
     margin-left: 20rem;
     margin-right: 2rem;
+    margin-left: 18rem;
   }
 }
 
@@ -261,9 +277,6 @@ a.sidebar-nav-item:focus {
   .sidebar-footer {
     position: absolute;
     bottom: 1rem;
-  }
-
-  .sidebar-footer p{
     margin-left: 1rem;
   }
 }
