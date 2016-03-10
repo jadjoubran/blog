@@ -3,36 +3,34 @@ layout: post
 title: Laravel Angular Material Starter v3.1
 ---
 
-[Laravel Angular Material Starter](http://laravel-angular.io){:target="_blank"} has reached version 3.1  
-I would like to thank the contributors and early users for making it possible.
+[Laravel Angular Material Starter](http://laravel-angular.io){:target="_blank"} has recently hit version 3.1  
+I would like to thank all the contributors and users for making it possible.
 
 ### What's new?
 
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
+Here are some of the goodies available as of v3.1:
 
-* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
-* Mobile friendly design and development
-* Easily scalable text and component sizing with `rem` units in the CSS
-* Support for a wide gamut of HTML elements
-* Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+* Based on a fresh Laravel 5.2 installation
+* Angular 1.5 (with components support)
+* Improved folder structure for components & pages
+* Faster Elixir task
+* EcmaScript 6 support (thanks to [@jadsalhani](https://github.com/jadsalhani){:target="_blank"})
 
-### Upgrade Guide?
+Your EcmaScript 6 code will be transpiled into browser compliant EcmaScript 5 code.
 
-In addition to the features of Poole, Hyde adds the following:
+Checkout the [official documentation](https://laravel-angular.readme.io/docs/overview#whats-new-in-31){:target="_blank"} for more info.
 
-* Sidebar includes support for textual modules and a dynamically generated navigation with active link support
-* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
-* [Eight optional color schemes](https://github.com/poole/hyde#themes), available via `<body>` classes
+### Looking to Upgrade?
 
-[Head to the readme](https://github.com/poole/hyde#readme) to learn more.
+Follow the [Upgrade Guide](https://laravel-angular.readme.io/docs/upgrade-guide){:target="_blank"} ;)
+
 
 ### What's next?
 
-Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
+Expect some detailed screencasts very soon!
 
-### Download
+One of the screencasts will cover the tutorial available in the documentation.
 
-Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
+The main features planned for version 3.2 will be an awesome `artisan ng:auth` generator and/or an out of the box JWT authentication. Feel free to mention what you would like to see as a new feature in the comments below!
 
-Thanks!
+{% include subscribe.html %}

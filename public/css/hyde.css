@@ -280,3 +280,8 @@ a.sidebar-nav-item:focus {
     margin-left: 1rem;
   }
 }
+
+.image-circle{
+  border-radius: 50%;
+  float: right;
+}
