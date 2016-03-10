@@ -4,7 +4,7 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-03-08T22:36:22+01:00</updated>
+ <updated>2016-03-10T18:21:23+01:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
@@ -17,43 +17,255 @@
    <link href="http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1/"/>
    <updated>2016-03-08T00:00:00+01:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://laravel-angular.io&quot; target=&quot;_blank&quot;&gt;Laravel Angular Material Starter&lt;/a&gt; has reached version 3.1&lt;br /&gt;
-I would like to thank the contributors and early users for making it possible.&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://laravel-angular.io&quot; target=&quot;_blank&quot;&gt;Laravel Angular Material Starter&lt;/a&gt; has recently hit version 3.1&lt;br /&gt;
+I would like to thank all the contributors and users for making it possible.&lt;/p&gt;
 
 &lt;h3 id=&quot;whats-new&quot;&gt;What’s new?&lt;/h3&gt;
 
-&lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like Hyde here) includes the following:&lt;/p&gt;
+&lt;p&gt;Here are some of the goodies available as of v3.1:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
-  &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
-  &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
-  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
-  &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
+  &lt;li&gt;Based on a fresh Laravel 5.2 installation&lt;/li&gt;
+  &lt;li&gt;Angular 1.5 (with components support)&lt;/li&gt;
+  &lt;li&gt;Improved folder structure for components &amp;amp; pages&lt;/li&gt;
+  &lt;li&gt;Faster Elixir task&lt;/li&gt;
+  &lt;li&gt;EcmaScript 6 support (thanks to &lt;a href=&quot;https://github.com/jadsalhani&quot; target=&quot;_blank&quot;&gt;@jadsalhani&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;upgrade-guide&quot;&gt;Upgrade Guide?&lt;/h3&gt;
+&lt;p&gt;Your EcmaScript 6 code will be transpiled into browser compliant EcmaScript 5 code.&lt;/p&gt;
 
-&lt;p&gt;In addition to the features of Poole, Hyde adds the following:&lt;/p&gt;
+&lt;p&gt;Checkout the &lt;a href=&quot;https://laravel-angular.readme.io/docs/overview#whats-new-in-31&quot; target=&quot;_blank&quot;&gt;official documentation&lt;/a&gt; for more info.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active link support&lt;/li&gt;
-  &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt; (right sidebar), available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/poole/hyde#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;, available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;looking-to-upgrade&quot;&gt;Looking to Upgrade?&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/poole/hyde#readme&quot;&gt;Head to the readme&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;p&gt;Follow the &lt;a href=&quot;https://laravel-angular.readme.io/docs/upgrade-guide&quot; target=&quot;_blank&quot;&gt;Upgrade Guide&lt;/a&gt; ;)&lt;/p&gt;
 
 &lt;h3 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h3&gt;
 
-&lt;p&gt;Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
+&lt;p&gt;Expect some detailed screencasts very soon!&lt;/p&gt;
 
-&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
+&lt;p&gt;One of the screencasts will cover the tutorial available in the documentation.&lt;/p&gt;
 
-&lt;p&gt;Hyde is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
+&lt;p&gt;The main features planned for version 3.2 will be an awesome &lt;code class=&quot;highlighter-rouge&quot;&gt;artisan ng:auth&lt;/code&gt; generator and/or an out of the box JWT authentication. Feel free to mention what you would like to see as a new feature in the comments below!&lt;/p&gt;
 
-&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;If you like this post, you can
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1/&amp;amp;text=Laravel Angular Material Starter v3.1&amp;amp;via=joubranjad&amp;amp;related=joubranjad&quot; target=&quot;_blank&quot;&gt;
+  share it with your followers&lt;/a&gt;.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;style&gt;
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 15px 0px;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type=&quot;checkbox&quot;] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
+    &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
+        &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
+            &lt;div class=&quot;form-section&quot;&gt;
+                &lt;h4&gt;&lt;/h4&gt;
+                &lt;p&gt;Thank you! You have successfully subscribed to this blog&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
+            &lt;div class=&quot;subscribe-form&quot;&gt;
+                &lt;div class=&quot;form-section&quot;&gt;
+                    &lt;h2 style=&quot;font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;&quot;&gt;Stay in the loop&lt;/h2&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;width: 100%;&quot;&gt;
+                    &lt;div class=&quot;form-group ml-field-email ml-validate-required ml-validate-email&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;ml-submit&quot; value=&quot;1&quot; /&gt;
+                        &lt;div class=&quot;subscribe-form&quot; id=&quot;subs-form&quot; style=&quot;display: flex;padding-bottom: 0;padding-top:0;&quot;&gt;
+                            &lt;input type=&quot;email&quot; name=&quot;fields[email]&quot; class=&quot;subscribe-input&quot; placeholder=&quot;Your e-mail address&quot; value=&quot;&quot; /&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;primary&quot;&gt;
+                                Subscribe
+                            &lt;/button&gt;
+                            &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px;&quot; /&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;script&gt;
+            function ml_webform_success_1918333() {
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-success&#39;).show();
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-form&#39;).hide();
+            };
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static.mailerlite.com/js/w/webforms.js?v25&quot;&gt;&lt;/script&gt;
+
 </content>
  </entry>
  
