@@ -4,7 +4,7 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-03-13T01:02:28+01:00</updated>
+ <updated>2016-03-13T11:20:25+01:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
@@ -19,7 +19,7 @@
    <id>http://blog.jadjoubran.io/2016/03/13/screencast-tutorial</id>
    <content type="html">&lt;p&gt;In this screencast we’ll explore a step by step tutorial to create a form that saves Posts into the database using Angular Material with a Laravel API.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/_ZWV9KBK2N8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;100%&quot; style=&quot;max-width:560px;&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/_ZWV9KBK2N8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;hr /&gt;
 
@@ -96,7 +96,8 @@
 }
 
 #mlb2-1918333 .subscribe-form .form-section h4 {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 0 0px;
+    text-align: center;
     padding: 0px!important;
     color: #27AE60!important;
     font-size: 20px!important;
@@ -169,6 +170,7 @@
 }
 
 #mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
     border: none !important;
     cursor: pointer !important;
     width: 150px !important;
@@ -197,14 +199,22 @@
 #mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
     border-color: red!important;
 }
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
 &lt;/style&gt;
 
 &lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
     &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
         &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
             &lt;div class=&quot;form-section&quot;&gt;
-                &lt;h4&gt;&lt;/h4&gt;
-                &lt;p&gt;Thank you! You have successfully subscribed to this blog&lt;/p&gt;
+                &lt;h4&gt;Thanks for subscribing. Stay tuned!&lt;/h4&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
@@ -222,7 +232,7 @@
                                 Subscribe
                             &lt;/button&gt;
                             &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
-                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px;&quot; /&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px; margin: 0 auto;&quot; /&gt;
                             &lt;/button&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
@@ -353,7 +363,8 @@ I would like to thank all the contributors and users for making it possible.&lt;
 }
 
 #mlb2-1918333 .subscribe-form .form-section h4 {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 0 0px;
+    text-align: center;
     padding: 0px!important;
     color: #27AE60!important;
     font-size: 20px!important;
@@ -426,6 +437,7 @@ I would like to thank all the contributors and users for making it possible.&lt;
 }
 
 #mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
     border: none !important;
     cursor: pointer !important;
     width: 150px !important;
@@ -454,14 +466,22 @@ I would like to thank all the contributors and users for making it possible.&lt;
 #mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
     border-color: red!important;
 }
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
 &lt;/style&gt;
 
 &lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
     &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
         &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
             &lt;div class=&quot;form-section&quot;&gt;
-                &lt;h4&gt;&lt;/h4&gt;
-                &lt;p&gt;Thank you! You have successfully subscribed to this blog&lt;/p&gt;
+                &lt;h4&gt;Thanks for subscribing. Stay tuned!&lt;/h4&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
@@ -479,7 +499,7 @@ I would like to thank all the contributors and users for making it possible.&lt;
                                 Subscribe
                             &lt;/button&gt;
                             &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
-                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px;&quot; /&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px; margin: 0 auto;&quot; /&gt;
                             &lt;/button&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
