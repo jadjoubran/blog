@@ -1,0 +1,39 @@
+---
+layout: post
+title: Cool Sublime Shortcuts
+---
+
+
+I would like to share some of the sublime shortcuts that I use everyday.
+
+I would recommend that you learn a new one everyday.
+
+<p class="message">
+	If you're on Windows or Linux, use <kbd>Ctrl</kbd> instead of <kbd>Cmd</kbd>
+</p>
+
+
+### Go to Anything
+
+Let's start with the most used sublime keyboard shortcut:
+
+
+<kbd>Cmd</kbd> + <kbd>P</kbd>
+
+Assuming that you have a folder or a project open in Sublime Text, you'll be able to start typing the name of any file that you want to navigate to.  
+Try to skip some characters in the file name, you'll still find it! It uses a technique called Fuzzy searching.
+
+
+### Command Palette
+
+<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+
+This command brings up the Command Palette. Which is basically a portal to almost any command you could run in Sublime Text.  
+Try toggling the word wrap with `Word Wrap: Toggle`.  
+Remember this is also using Fuzzy searching.   
+You can try and reindent your file automatically by bringing up your command palette and then running `Reindent lines`.
+
+
+
+
+{% include subscribe.html %}
