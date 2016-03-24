@@ -4,7 +4,7 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-03-13T11:20:25+01:00</updated>
+ <updated>2016-03-24T13:12:33+02:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
@@ -13,9 +13,259 @@
 
  
  <entry>
+   <title>NDC Oslo - Scaling Large Angular Apps</title>
+   <link href="http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/"/>
+   <updated>2016-03-24T00:00:00+02:00</updated>
+   <id>http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular</id>
+   <content type="html">&lt;p&gt;I’m excited to announce that I’ll be presenting &lt;strong&gt;&lt;a href=&quot;http://ndcoslo.com/talk/scaling-large-angular-apps/&quot; target=&quot;_blank&quot;&gt;Scaling Large Angular Apps&lt;/a&gt;&lt;/strong&gt; in &lt;strong&gt;&lt;a href=&quot;http://ndcoslo.com/&quot; target=&quot;_blank&quot;&gt;NDC Oslo&lt;/a&gt;&lt;/strong&gt; - Norway.&lt;/p&gt;
+
+&lt;p&gt;NDC Oslo is one of the biggest developer conferences in Europe. With more than 150 speakers this year, covering over 40 technologies.&lt;/p&gt;
+
+&lt;p&gt;Here’s the abstract of my talk:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Scaling beyond the To Do list App of Angular JS. Although Angular JS is a powerful framework, we still need conventions, automation and a variety of tools to make it scale. Especially in a team environment. Learn how to scale your angular apps with simple but effective techniques, endorsed by the Angular community.&lt;/p&gt;
+
+  &lt;p&gt;This talk will include concepts applicable to both newest angular versions (2 and 1.5)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Are you going to NDC Oslo? If yes, let me know in the comments!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you like this post, you can
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/&amp;amp;text=NDC Oslo - Scaling Large Angular Apps&amp;amp;via=joubranjad&amp;amp;related=joubranjad&quot; target=&quot;_blank&quot;&gt;
+  share it with your followers&lt;/a&gt;.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;style&gt;
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 0 0px;
+    text-align: center;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type=&quot;checkbox&quot;] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
+    &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
+        &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
+            &lt;div class=&quot;form-section&quot;&gt;
+                &lt;h4&gt;Thanks for subscribing. Stay tuned!&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
+            &lt;div class=&quot;subscribe-form&quot;&gt;
+                &lt;div class=&quot;form-section&quot;&gt;
+                    &lt;h2 style=&quot;font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;&quot;&gt;Stay in the loop&lt;/h2&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;width: 100%;&quot;&gt;
+                    &lt;div class=&quot;form-group ml-field-email ml-validate-required ml-validate-email&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;ml-submit&quot; value=&quot;1&quot; /&gt;
+                        &lt;div class=&quot;subscribe-form&quot; id=&quot;subs-form&quot; style=&quot;display: flex;padding-bottom: 0;padding-top:0;&quot;&gt;
+                            &lt;input type=&quot;email&quot; name=&quot;fields[email]&quot; class=&quot;subscribe-input&quot; placeholder=&quot;Your e-mail address&quot; value=&quot;&quot; /&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;primary&quot;&gt;
+                                Subscribe
+                            &lt;/button&gt;
+                            &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px; margin: 0 auto;&quot; /&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;script&gt;
+            function ml_webform_success_1918333() {
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-success&#39;).show();
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-form&#39;).hide();
+            };
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static.mailerlite.com/js/w/webforms.js?v25&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Laravel & Angular tutorial screencast</title>
    <link href="http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/"/>
-   <updated>2016-03-13T00:00:00+01:00</updated>
+   <updated>2016-03-13T00:00:00+02:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/13/screencast-tutorial</id>
    <content type="html">&lt;p&gt;In this screencast we’ll explore a step by step tutorial to create a form that saves Posts into the database using Angular Material with a Laravel API.&lt;/p&gt;
 
@@ -255,7 +505,7 @@
  <entry>
    <title>Laravel Angular Material Starter v3.1</title>
    <link href="http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1/"/>
-   <updated>2016-03-08T00:00:00+01:00</updated>
+   <updated>2016-03-08T00:00:00+02:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://laravel-angular.io&quot; target=&quot;_blank&quot;&gt;Laravel Angular Material Starter&lt;/a&gt; has recently hit version 3.1&lt;br /&gt;
 I would like to thank all the contributors and users for making it possible.&lt;/p&gt;
