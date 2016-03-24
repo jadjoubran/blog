@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NDC Oslo - Scaling Large Angular Apps
+title: NDC Oslo - Scaling large Angular apps
 ---
 
 I'm excited to announce that I'll be presenting **[Scaling Large Angular Apps](http://ndcoslo.com/talk/scaling-large-angular-apps/){:target="_blank"}** in **[NDC Oslo](http://ndcoslo.com/){:target="_blank"}** - Norway.
