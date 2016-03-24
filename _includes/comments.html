@@ -1,8 +1,8 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = 'http://blog.jadjoubran.io';
-this.page.identifier = "{{ site.disqusid }}{{ page.url | replace:'index.html','' }}";
+this.page.url = 'http://blog.jadjoubran.io{{ page.url | replace:'index.html','' }}';
+this.page.identifier = "jadjoubran{{ page.url | replace:'index.html','' }}";
 };
 
 (function() {
