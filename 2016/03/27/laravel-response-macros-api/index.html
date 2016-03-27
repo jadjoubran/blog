@@ -11,7 +11,7 @@
 
   <title>
     
-      NDC Oslo - Scaling large Angular apps &middot; Jad Joubran
+      Laravel Response Macros for APIs &middot; Jad Joubran
     
   </title>
 
@@ -80,7 +80,7 @@
     <!-- <hr>
 
 If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/&text=NDC Oslo - Scaling large Angular apps&via=joubranjad&related=joubranjad" 
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&text=Laravel Response Macros for APIs&via=joubranjad&related=joubranjad" 
    target="_blank">
   share it with your followers</a>.
 <br>
@@ -315,27 +315,105 @@ If you like this post, you can
   <div class="content container">
 
     <div class="post">
-  <h1 class="post-title">NDC Oslo - Scaling large Angular apps</h1>
-  <span class="post-date">24 Mar 2016</span>
+  <h1 class="post-title">Laravel Response Macros for APIs</h1>
+  <span class="post-date">27 Mar 2016</span>
 
-  <p>I’m excited to announce that I’ll be presenting <strong><a href="http://ndcoslo.com/talk/scaling-large-angular-apps/" target="_blank">Scaling Large Angular Apps</a></strong> in <strong><a href="http://ndcoslo.com/" target="_blank">NDC Oslo</a></strong> - Norway.</p>
+  <p>I would like to show you a use case for response macros when building an API with Laravel.</p>
 
-<p>NDC Oslo is one of the biggest developer conferences in Europe. With more than 150 speakers this year, covering over 40 technologies.</p>
+<h3 id="dealing-with-apis">Dealing with APIs</h3>
 
-<p>Here’s the abstract of my talk:</p>
+<p>Consistency is one of the most important aspects to consider when building an <strong>API</strong>.
+You often find yourself returning 2 types of responses; one for success and one for errors.</p>
 
-<blockquote>
-  <p>Scaling beyond the To Do list App of Angular JS. Although Angular JS is a powerful framework, we still need conventions, automation and a variety of tools to make it scale. Especially in a team environment. Learn how to scale your angular apps with simple but effective techniques, endorsed by the Angular community.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
-  <p>This talk will include concepts applicable to both newest angular versions (2 and 1.5)</p>
-</blockquote>
+<span class="k">class</span> <span class="nc">PostsController</span><span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(){</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="c1">//some code
+</span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+      <span class="c1">//error
+</span>      <span class="k">return</span> <span class="p">[</span>
+        <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span>
+      <span class="p">];</span>
+    <span class="p">}</span>
 
-<p>Are you going to NDC Oslo? If yes, let me know in the comments!</p>
+    <span class="nv">$posts</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">get</span><span class="p">();</span>
+  
+    <span class="c1">//success
+</span>    <span class="k">return</span> <span class="p">[</span>
+      <span class="s1">'errors'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s1">'data'</span>   <span class="o">=&gt;</span> <span class="nb">compact</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span>
+    <span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>As you can see, we are returning error responses in a specific format, and success responses in a different format.<br />
+Soon enough you’ll notice that you’re repeating this over and over again.</p>
+
+<h3 id="using-response-macros">Using response macros</h3>
+
+<p><a href="https://laravel.com/docs/5.2/responses#response-macros" target="_blank">Response macros</a>
+allow you to define a macro that can be called on the <code class="highlighter-rouge">response()</code> function.</p>
+
+<p>We will create a new <code class="highlighter-rouge">ResponseMacroServiceProvider</code> and define a <code class="highlighter-rouge">success</code> and <code class="highlighter-rouge">error</code> macros inside the <code class="highlighter-rouge">boot</code> function:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">ResponseMacroServiceProvider</span> <span class="k">extends</span> <span class="nx">ServiceProvider</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">boot</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="nx">Response</span><span class="o">::</span><span class="na">macro</span><span class="p">(</span><span class="s1">'success'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">Response</span><span class="o">::</span><span class="na">json</span><span class="p">([</span>
+          <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">,</span>
+        <span class="p">]);</span>
+    <span class="p">});</span>
+
+    <span class="nx">Response</span><span class="o">::</span><span class="na">macro</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="nv">$status</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">Response</span><span class="o">::</span><span class="na">json</span><span class="p">([</span>
+          <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="nv">$message</span><span class="p">,</span>
+        <span class="p">],</span> <span class="nv">$status</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>So now we can refactor the previous code:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">PostsController</span><span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(){</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="c1">//some code
+</span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+      <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">error</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nv">$posts</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">get</span><span class="p">();</span>
+  
+    <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">success</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>As you can see, <code class="highlighter-rouge">response macros</code> help us remain consistent when returning data from the API. Whether it was a success or an error.<br />
+This means your front-end API calls will expect a consistent response.</p>
+
+<p>I will write a new tutorial soon on how you can take it a step further in your front-end by implementing Response Interceptors to handle error responses.</p>
 
 <hr />
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/&amp;text=NDC Oslo - Scaling large Angular apps&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&amp;text=Laravel Response Macros for APIs&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
 <br />
 <br /></p>
@@ -571,9 +649,9 @@ If you like this post, you can
     
       <li>
         <h3>
-          <a href="/2016/03/27/laravel-response-macros-api/">
-            Laravel Response Macros for APIs
-            <small>27 Mar 2016</small>
+          <a href="/2016/03/24/ndc-oslo-angular/">
+            NDC Oslo - Scaling large Angular apps
+            <small>24 Mar 2016</small>
           </a>
         </h3>
       </li>
@@ -603,8 +681,8 @@ If you like this post, you can
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = 'http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/';
-this.page.identifier = "jadjoubran/2016/03/24/ndc-oslo-angular/";
+this.page.url = 'http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/';
+this.page.identifier = "jadjoubran/2016/03/27/laravel-response-macros-api/";
 };
 
 (function() {
