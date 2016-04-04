@@ -327,8 +327,10 @@ You often find yourself returning 2 types of responses; one for success and one 
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
-<span class="k">class</span> <span class="nc">PostsController</span><span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(){</span>
+<span class="k">class</span> <span class="nc">PostsController</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
+  <span class="p">{</span>
     <span class="k">try</span> <span class="p">{</span>
       <span class="c1">//some code
 </span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
@@ -389,8 +391,10 @@ allow you to define a macro that can be called on the <code class="highlighter-r
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
-<span class="k">class</span> <span class="nc">PostsController</span><span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(){</span>
+<span class="k">class</span> <span class="nc">PostsController</span>
+<span class="p">{</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
+  <span class="p">{</span>
     <span class="k">try</span> <span class="p">{</span>
       <span class="c1">//some code
 </span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
