@@ -14,8 +14,10 @@ You often find yourself returning 2 types of responses; one for success and one 
 ```php
 <?php
 
-class PostsController{
-  public function get(){
+class PostsController
+{
+  public function get()
+  {
     try {
       //some code
     }catch (Exception $e){
@@ -76,8 +78,10 @@ So now we can refactor the previous code:
 ```php
 <?php
 
-class PostsController{
-  public function get(){
+class PostsController
+{
+  public function get()
+  {
     try {
       //some code
     }catch (Exception $e){
