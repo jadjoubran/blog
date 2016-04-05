@@ -72,7 +72,7 @@ class ResponseMacroServiceProvider extends ServiceProvider
   }
 }
 ```
-
+We also need to add this ServiceProvider to the **providers** array in `config/app.php`.  
 So now we can refactor the previous code:
 
 ```php
