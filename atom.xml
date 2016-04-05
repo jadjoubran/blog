@@ -4,7 +4,7 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-04-04T13:57:29+03:00</updated>
+ <updated>2016-04-05T14:44:28+03:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
@@ -85,8 +85,8 @@ allow you to define a macro that can be called on the &lt;code class=&quot;highl
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
-&lt;p&gt;So now we can refactor the previous code:&lt;/p&gt;
+&lt;p&gt;We also need to add this ServiceProvider to the &lt;strong&gt;providers&lt;/strong&gt; array in &lt;code class=&quot;highlighter-rouge&quot;&gt;config/app.php&lt;/code&gt;.&lt;br /&gt;
+So now we can refactor the previous code:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
 
