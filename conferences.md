@@ -5,6 +5,7 @@ title: Conferences
 
 Below you can find the conferences where I've been invited to speak. I've enjoyed every single one of them and I'm looking forward to attend more of them.
 
+
 ### NDC Oslo
 Talk: [Scaling large Angular apps](http://localhost:4000/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
 Location: Oslo, Norway  
