@@ -11,7 +11,7 @@
 
   <title>
     
-      Laravel & Angular tutorial screencast &middot; Jad Joubran
+      Angular error interceptors &middot; Jad Joubran
     
   </title>
 
@@ -80,7 +80,7 @@
     <!-- <hr>
 
 If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/&text=Laravel & Angular tutorial screencast&via=joubranjad&related=joubranjad" 
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/&text=Angular error interceptors&via=joubranjad&related=joubranjad" 
    target="_blank">
   share it with your followers</a>.
 <br>
@@ -315,17 +315,98 @@ If you like this post, you can
   <div class="content container">
 
     <div class="post">
-  <h1 class="post-title">Laravel & Angular tutorial screencast</h1>
-  <span class="post-date">13 Mar 2016</span>
+  <h1 class="post-title">Angular error interceptors</h1>
+  <span class="post-date">05 Apr 2016</span>
 
-  <p>In this screencast we’ll explore a step by step tutorial to create a form that saves Posts into the database using Angular Material with a Laravel API.</p>
+  <p>After introducing <a href="/2016/03/27/laravel-response-macros-api/" target="_blank">response macros for Laravel APIs</a>, it’s time to keep our angular code DRY.</p>
 
-<iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/_ZWV9KBK2N8" frameborder="0" allowfullscreen=""></iframe>
+<p>Most modern web apps consume APIs frequently. Knowing that, we need to avoid writing the same code on every single API call.</p>
+
+<h2 id="restangular">Restangular</h2>
+
+<p>We will use <code class="highlighter-rouge">Restangular</code> to perform our API calls. <a href="https://github.com/mgonto/restangular">Restangular</a> is a wrapper on top of <code class="highlighter-rouge">$http</code>. You can write your own error interceptors using <code class="highlighter-rouge">$http</code>.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Below is the setup for an API service based on Restangular, written in ES6.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">class</span> <span class="nx">APIService</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">Restangular</span><span class="p">,</span> <span class="nx">ToastService</span><span class="p">)</span> <span class="p">{</span>
+    <span class="s1">'ngInject'</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+      <span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'application/x.laravel.v1+json'</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">Restangular</span><span class="p">.</span><span class="nx">withConfig</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">RestangularConfigurer</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="nx">RestangularConfigurer</span>
+        <span class="p">.</span><span class="nx">setBaseUrl</span><span class="p">(</span><span class="s1">'/api/'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">setDefaultHeaders</span><span class="p">(</span><span class="nx">headers</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">setErrorInterceptor</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">422</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">error</span> <span class="k">in</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">)</span> <span class="p">{</span>
+              <span class="kd">var</span> <span class="nx">error_message</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">[</span><span class="nx">error</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+              <span class="k">return</span> <span class="nx">ToastService</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error_message</span><span class="p">);</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+
+        <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>As you can see, we start by setting the <strong>baseUrl</strong> to avoid writing <code class="highlighter-rouge">/api/</code> on every single request.</p>
+
+<p>Then we’re setting some default headers. We’re sending an accept header as part of the content negotiation process. But that’s outside the scope of this article. (Let me know in the comments if you’d like to have an article on content negotiation using dingo/api)</p>
+
+<p>Then we’re setting an error interceptor. Which is a function that gets called <strong>every-time</strong> the API call encounters an <strong>error</strong>.<br />
+We can then extract the <em>response status</em> and perform specific actions based on it. <br />
+We know for sure that Laravel returns a response status of <strong>422</strong> whenever the validation fails.
+That’s how we’re able to show the first error message that we get from the API.<br />
+By the way, <code class="highlighter-rouge">ToastService</code> is just a helper service that opens Toast messages (using <a href="https://material.angularjs.org/">Angular Material</a>).</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Querying our API can now be done as following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>There’s no need to write the error function anymore, because that’s being handled by the error interceptor. We know that if the <code class="highlighter-rouge">title</code> for example doesn’t validate correctly, we’ll automatically get a toast message saying that.</p>
+
+<h3 id="what-if-">What if …</h3>
+
+<p>What if for a specific scenario, you need to perform another action?
+That’s easy. Just pass in your custom error handler as the second argument for the <code class="highlighter-rouge">then</code> function.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
+<span class="p">},</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//response.status</span>
+    <span class="c1">//response.data</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Note that this action will be performed as well as the error interceptor.</p>
+
+<h2 id="prefer-a-screencast">Prefer a screencast?</h2>
+
+<p>This topic is also discussed in the below screencast</p>
+
+<iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/RHQNpw-XmpI" frameborder="0" allowfullscreen=""></iframe>
 
 <hr />
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/&amp;text=Laravel &amp; Angular tutorial screencast&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/&amp;text=Angular error interceptors&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
 <br />
 <br /></p>
@@ -561,15 +642,6 @@ If you like this post, you can
     
       <li>
         <h3>
-          <a href="/2016/04/05/angular-error-interceptor/">
-            Angular error interceptors
-            <small>05 Apr 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/2016/03/27/laravel-response-macros-api/">
             Laravel Response Macros for APIs
             <small>27 Mar 2016</small>
@@ -586,6 +658,15 @@ If you like this post, you can
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/2016/03/13/screencast-tutorial/">
+            Laravel & Angular tutorial screencast
+            <small>13 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -593,8 +674,8 @@ If you like this post, you can
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = 'http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/';
-this.page.identifier = "jadjoubran/2016/03/13/screencast-tutorial/";
+this.page.url = 'http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/';
+this.page.identifier = "jadjoubran/2016/04/05/angular-error-interceptor/";
 };
 
 (function() {

@@ -4,13 +4,334 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-04-05T14:44:28+03:00</updated>
+ <updated>2016-04-05T21:06:36+03:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Angular error interceptors</title>
+   <link href="http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/"/>
+   <updated>2016-04-05T00:00:00+03:00</updated>
+   <id>http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor</id>
+   <content type="html">&lt;p&gt;After introducing &lt;a href=&quot;/2016/03/27/laravel-response-macros-api/&quot; target=&quot;_blank&quot;&gt;response macros for Laravel APIs&lt;/a&gt;, it’s time to keep our angular code DRY.&lt;/p&gt;
+
+&lt;p&gt;Most modern web apps consume APIs frequently. Knowing that, we need to avoid writing the same code on every single API call.&lt;/p&gt;
+
+&lt;h2 id=&quot;restangular&quot;&gt;Restangular&lt;/h2&gt;
+
+&lt;p&gt;We will use &lt;code class=&quot;highlighter-rouge&quot;&gt;Restangular&lt;/code&gt; to perform our API calls. &lt;a href=&quot;https://github.com/mgonto/restangular&quot;&gt;Restangular&lt;/a&gt; is a wrapper on top of &lt;code class=&quot;highlighter-rouge&quot;&gt;$http&lt;/code&gt;. You can write your own error interceptors using &lt;code class=&quot;highlighter-rouge&quot;&gt;$http&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;Below is the setup for an API service based on Restangular, written in ES6.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;APIService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Restangular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ToastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&#39;ngInject&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&#39;Content-Type&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;application/json&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&#39;Accept&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;application/x.laravel.v1+json&#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Restangular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;withConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RestangularConfigurer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+      &lt;span class=&quot;nx&quot;&gt;RestangularConfigurer&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setBaseUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;/api/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setDefaultHeaders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setErrorInterceptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+          &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;422&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error_message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+              &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ToastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error_message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;As you can see, we start by setting the &lt;strong&gt;baseUrl&lt;/strong&gt; to avoid writing &lt;code class=&quot;highlighter-rouge&quot;&gt;/api/&lt;/code&gt; on every single request.&lt;/p&gt;
+
+&lt;p&gt;Then we’re setting some default headers. We’re sending an accept header as part of the content negotiation process. But that’s outside the scope of this article. (Let me know in the comments if you’d like to have an article on content negotiation using dingo/api)&lt;/p&gt;
+
+&lt;p&gt;Then we’re setting an error interceptor. Which is a function that gets called &lt;strong&gt;every-time&lt;/strong&gt; the API call encounters an &lt;strong&gt;error&lt;/strong&gt;.&lt;br /&gt;
+We can then extract the &lt;em&gt;response status&lt;/em&gt; and perform specific actions based on it. &lt;br /&gt;
+We know for sure that Laravel returns a response status of &lt;strong&gt;422&lt;/strong&gt; whenever the validation fails.
+That’s how we’re able to show the first error message that we get from the API.&lt;br /&gt;
+By the way, &lt;code class=&quot;highlighter-rouge&quot;&gt;ToastService&lt;/code&gt; is just a helper service that opens Toast messages (using &lt;a href=&quot;https://material.angularjs.org/&quot;&gt;Angular Material&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+
+&lt;p&gt;Querying our API can now be done as following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;API&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;products&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There’s no need to write the error function anymore, because that’s being handled by the error interceptor. We know that if the &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; for example doesn’t validate correctly, we’ll automatically get a toast message saying that.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-if-&quot;&gt;What if …&lt;/h3&gt;
+
+&lt;p&gt;What if for a specific scenario, you need to perform another action?
+That’s easy. Just pass in your custom error handler as the second argument for the &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;API&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;products&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//response.status&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//response.data&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that this action will be performed as well as the error interceptor.&lt;/p&gt;
+
+&lt;h2 id=&quot;prefer-a-screencast&quot;&gt;Prefer a screencast?&lt;/h2&gt;
+
+&lt;p&gt;This topic is also discussed in the below screencast&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; style=&quot;max-width:560px;&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RHQNpw-XmpI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you like this post, you can
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/&amp;amp;text=Angular error interceptors&amp;amp;via=joubranjad&amp;amp;related=joubranjad&quot; target=&quot;_blank&quot;&gt;
+  share it with your followers&lt;/a&gt;.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;style&gt;
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 0 0px;
+    text-align: center;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type=&quot;checkbox&quot;] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
+    &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
+        &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
+            &lt;div class=&quot;form-section&quot;&gt;
+                &lt;h4&gt;Thanks for subscribing. Stay tuned!&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
+            &lt;div class=&quot;subscribe-form&quot;&gt;
+                &lt;div class=&quot;form-section&quot;&gt;
+                    &lt;h2 style=&quot;font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;&quot;&gt;Stay in the loop&lt;/h2&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;width: 100%;&quot;&gt;
+                    &lt;div class=&quot;form-group ml-field-email ml-validate-required ml-validate-email&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;ml-submit&quot; value=&quot;1&quot; /&gt;
+                        &lt;div class=&quot;subscribe-form&quot; id=&quot;subs-form&quot; style=&quot;display: flex;padding-bottom: 0;padding-top:0;&quot;&gt;
+                            &lt;input type=&quot;email&quot; name=&quot;fields[email]&quot; class=&quot;subscribe-input&quot; placeholder=&quot;Your e-mail address&quot; value=&quot;&quot; /&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;primary&quot;&gt;
+                                Subscribe
+                            &lt;/button&gt;
+                            &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px; margin: 0 auto;&quot; /&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;script&gt;
+            function ml_webform_success_1918333() {
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-success&#39;).show();
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-form&#39;).hide();
+            };
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static.mailerlite.com/js/w/webforms.js?v25&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Laravel Response Macros for APIs</title>
