@@ -7,7 +7,7 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 
 ### NDC Oslo
-Talk: [Scaling large Angular apps](http://localhost:4000/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
+Talk: [Scaling large Angular apps](/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
 Location: Oslo, Norway  
 Date: June 7th, 2016 (upcoming)
 
