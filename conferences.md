@@ -3,7 +3,7 @@ layout: page
 title: Conferences
 ---
 
-Below you can find the conferences where I've been invited to speak. I've enjoyed every single one of them and I'm looking forward to attend more of them.
+Below you can find the conferences where I've been invited to speak. I've enjoyed every single one of them and I'm looking forward to attending more of them.
 
 
 ### NDC Oslo
