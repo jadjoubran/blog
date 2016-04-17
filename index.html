@@ -11,7 +11,7 @@
 
   <title>
     
-      Jad Joubran &middot; Sharing my passion for code
+      Jad Joubran · Sharing my passion for code
     
   </title>
 
@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans%7CPT+Serif" rel="stylesheet" type="text/css">
   
-  <meta name="google-site-verification" content="hEU7cFvGBqiXCWOj9XV_OrB3elwIAwYQMqpoLrubXQU" />
+  <meta name="google-site-verification" content="hEU7cFvGBqiXCWOj9XV_OrB3elwIAwYQMqpoLrubXQU">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -73,6 +73,10 @@
       
       
       <a class="sidebar-nav-item" href="/conferences/">Conferences</a>
+      
+      
+      
+      
       
       
       
@@ -313,8 +317,8 @@ If you like this post, you can
 
   </div>
   <div class="sidebar-footer">
-    <iframe src="https://ghbtns.com/github-btn.html?user=jadjoubran&type=follow&count=false&size=small" frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-    <p>&copy; 2016. All rights reserved.</p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=jadjoubran&amp;type=follow&amp;count=false&amp;size=small" frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+    <p>© 2016. All rights reserved.</p>
   </div>
 </div>
 
@@ -324,105 +328,67 @@ If you like this post, you can
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2016/04/05/angular-error-interceptor/">
-        Angular error interceptors
+      <a href="/2016/04/17/story-laravel-angular-starter/">
+        The story of Laravel &amp; Angular material starter
       </a>
     </h1>
 
-    <span class="post-date">05 Apr 2016</span>
+    <span class="post-date">17 Apr 2016</span>
 
-    <p>After introducing <a href="/2016/03/27/laravel-response-macros-api/" target="_blank">response macros for Laravel APIs</a>, it’s time to keep our angular code DRY.</p>
+    <p>Today I’m writing because <strong>Laravel &amp; Angular material starter</strong> has reached <strong>1,000 stars</strong> on github!</p>
+<iframe class="DemoHeader-github" src="https://ghbtns.com/github-btn.html?user=jadjoubran&amp;repo=laravel5-angular-material-starter&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-<p>Most modern web apps consume APIs frequently. Knowing that, we need to avoid writing the same code on every single API call.</p>
+<p>It’s now one of the top 250 PHP projects on github. And the screencasts have just surpassed <strong>10,000 views</strong>! <img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle"></p>
 
-<h2 id="restangular">Restangular</h2>
+<p>I would like to take this opportunity to thank all the <a href="https://github.com/jadjoubran/laravel5-angular-material-starter/graphs/contributors" target="_blank">contributors</a> on the project. Especially those who have recently contributed to <strong>3.1</strong> and <strong>3.2</strong>:</p>
 
-<p>We will use <code class="highlighter-rouge">Restangular</code> to perform our API calls. <a href="https://github.com/mgonto/restangular">Restangular</a> is a wrapper on top of <code class="highlighter-rouge">$http</code>. You can write your own error interceptors using <code class="highlighter-rouge">$http</code>.</p>
+<ul>
+  <li><a href="https://github.com/jadsalhani" target="_blank">Jad Salhani</a></li>
+  <li><a href="https://github.com/kujtimiihoxha" target="_blank">Kujtim Hoxha</a></li>
+  <li><a href="https://github.com/shiruken1" target="_blank">Andres M.</a></li>
+  <li><a href="https://github.com/GrahamCampbell" target="_blank">Graham Campbell</a></li>
+  <li><a href="https://github.com/flick36" target="_blank">Allan Alvarez Ortiz</a></li>
+</ul>
 
-<h3 id="setup">Setup</h3>
+<p>Also all the other contributors who have been asking questions and discovering bugs on Github!</p>
 
-<p>Below is the setup for an API service based on Restangular, written in ES6.</p>
+<h2 id="how-it-started">How it started</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">class</span> <span class="nx">APIService</span> <span class="p">{</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">Restangular</span><span class="p">,</span> <span class="nx">ToastService</span><span class="p">)</span> <span class="p">{</span>
-    <span class="s1">'ngInject'</span><span class="p">;</span>
+<p>A few months ago, I was building a commercial project for a client. I needed to use Laravel for sure.<br>
+But I also wanted to use Angular to make the UI reactive &amp; I was particularly interested in the powerful components offered by Angular Material.</p>
 
-    <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
-      <span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'application/x.laravel.v1+json'</span>
-    <span class="p">};</span>
+<p>After spending over 40 hours on the setup for Laravel &amp; Angular (which by the way, wasn’t that good), 
+I noticed that open sourcing this setup would benefit a lot of users.</p>
 
-    <span class="k">return</span> <span class="nx">Restangular</span><span class="p">.</span><span class="nx">withConfig</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">RestangularConfigurer</span><span class="p">)</span> <span class="p">{</span>
+<p>A few weeks later, it got featured on <a href="https://laravel-news.com/2015/05/laravel-and-angular-material-starter-project/" target="_blank">Laravel News</a>. Since then, people started opening issues and tinkering with it.</p>
 
-      <span class="nx">RestangularConfigurer</span>
-        <span class="p">.</span><span class="nx">setBaseUrl</span><span class="p">(</span><span class="s1">'/api/'</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">setDefaultHeaders</span><span class="p">(</span><span class="nx">headers</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">setErrorInterceptor</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+<p>The top priority has been to provide people with best practices for Angular apps that use a Laravel API. I can’t claim that it’s perfect, so if you have some feedback make sure to open a new issue!</p>
 
-          <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">422</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">error</span> <span class="k">in</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">)</span> <span class="p">{</span>
-              <span class="kd">var</span> <span class="nx">error_message</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">[</span><span class="nx">error</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-              <span class="k">return</span> <span class="nx">ToastService</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error_message</span><span class="p">);</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
+<h2 id="whats-next">What’s next</h2>
 
-        <span class="p">});</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-<p>As you can see, we start by setting the <strong>baseUrl</strong> to avoid writing <code class="highlighter-rouge">/api/</code> on every single request.</p>
+<p>In a couple of weeks, <strong>version 3.2</strong> will be out. It will feature out of the box JWT Authentication and password resets. Here’s what has been <a href="https://github.com/jadjoubran/laravel5-angular-material-starter/blob/master/CHANGELOG.md#changelog" target="blank">added so far</a>.</p>
 
-<p>Then we’re setting some default headers. We’re sending an accept header as part of the content negotiation process. But that’s outside the scope of this article. (Let me know in the comments if you’d like to have an article on content negotiation using dingo/api)</p>
+<p>I’m also working on better documentation by adding beginner friendly installation and more screencasts.</p>
 
-<p>Then we’re setting an error interceptor. Which is a function that gets called <strong>every-time</strong> the API call encounters an <strong>error</strong>.<br />
-We can then extract the <em>response status</em> and perform specific actions based on it. <br />
-We know for sure that Laravel returns a response status of <strong>422</strong> whenever the validation fails.
-That’s how we’re able to show the first error message that we get from the API.<br />
-By the way, <code class="highlighter-rouge">ToastService</code> is just a helper service that opens Toast messages (using <a href="https://material.angularjs.org/">Angular Material</a>).</p>
+<h2 id="what-about-angular-2">What about Angular 2?</h2>
 
-<h3 id="usage">Usage</h3>
+<p>Angular 2 is just around the corner. Hence the next logical step is to start working on Angular 2 with typescript support. This will become a priority as soon as 3.2 is released!</p>
 
-<p>Querying our API can now be done as following:</p>
+<h2 id="anonymous-survey">Anonymous survey</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
-<span class="p">});</span>
-</code></pre>
-</div>
+<p>Community feedback has always been very important. That’s why I put together a 1 minute anonymous survey. No name, no email. I would love to know more how you’re using this starter project and how it can be better.</p>
 
-<p>There’s no need to write the error function anymore, because that’s being handled by the error interceptor. We know that if the <code class="highlighter-rouge">title</code> for example doesn’t validate correctly, we’ll automatically get a toast message saying that.</p>
+<p><a href="https://docs.google.com/forms/d/1_LOQzMzhJr6f5eW5W1cb37dzbE8JelP_AkqbQJ-fR4g/viewform">Anonymous survey</a></p>
 
-<h3 id="what-if-">What if …</h3>
+<p><img class="emoji" title=":heart:" alt=":heart:" src="https://assets.github.com/images/icons/emoji/unicode/2764.png" height="20" width="20" align="absmiddle"></p>
 
-<p>What if for a specific scenario, you need to perform another action?
-That’s easy. Just pass in your custom error handler as the second argument for the <code class="highlighter-rouge">then</code> function.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
-<span class="p">},</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="c1">//response.status</span>
-    <span class="c1">//response.data</span>
-<span class="p">});</span>
-</code></pre>
-</div>
-
-<p>Note that this action will be performed as well as the error interceptor.</p>
-
-<h2 id="prefer-a-screencast">Prefer a screencast?</h2>
-
-<p>This topic is also discussed in the below screencast</p>
-
-<iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/RHQNpw-XmpI" frameborder="0" allowfullscreen=""></iframe>
-
-<hr />
+<hr>
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/&amp;text=Angular error interceptors&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/&amp;text=The%20story%20of%20Laravel%20&amp;%20Angular%20material%20starter&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
-<br />
-<br /></p>
+<br>
+<br></p>
 
 <style>
     .subscribe-input{
@@ -620,14 +586,342 @@ That’s easy. Just pass in your custom error handler as the second argument for
                 </div>
                 <div style="width: 100%;">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
+                        <input type="hidden" name="ml-submit" value="1">
                         <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
                             <button type="submit" class="primary">
                                 Subscribe
                             </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script>
+            function ml_webform_success_1918333() {
+                jQuery('.ml-subscribe-form-1918333 .ml-block-success').show();
+                jQuery('.ml-subscribe-form-1918333 .ml-block-form').hide();
+            };
+        </script>
+    </div>
+</div>
+<script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.js?v25"></script>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/04/05/angular-error-interceptor/">
+        Angular error interceptors
+      </a>
+    </h1>
+
+    <span class="post-date">05 Apr 2016</span>
+
+    <p>After introducing <a href="/2016/03/27/laravel-response-macros-api/" target="_blank">response macros for Laravel APIs</a>, it’s time to keep our angular code DRY.</p>
+
+<p>Most modern web apps consume APIs frequently. Knowing that, we need to avoid writing the same code on every single API call.</p>
+
+<h2 id="restangular">Restangular</h2>
+
+<p>We will use <code class="highlighter-rouge">Restangular</code> to perform our API calls. <a href="https://github.com/mgonto/restangular">Restangular</a> is a wrapper on top of <code class="highlighter-rouge">$http</code>. You can write your own error interceptors using <code class="highlighter-rouge">$http</code>.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Below is the setup for an API service based on Restangular, written in ES6.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="kr">export</span> <span class="kr">class</span> <span class="nx">APIService</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">Restangular</span><span class="p">,</span> <span class="nx">ToastService</span><span class="p">)</span> <span class="p">{</span>
+    <span class="s1">'ngInject'</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+      <span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'application/x.laravel.v1+json'</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="nx">Restangular</span><span class="p">.</span><span class="nx">withConfig</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">RestangularConfigurer</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="nx">RestangularConfigurer</span>
+        <span class="p">.</span><span class="nx">setBaseUrl</span><span class="p">(</span><span class="s1">'/api/'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">setDefaultHeaders</span><span class="p">(</span><span class="nx">headers</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">setErrorInterceptor</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">422</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">error</span> <span class="k">in</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">)</span> <span class="p">{</span>
+              <span class="kd">var</span> <span class="nx">error_message</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">errors</span><span class="p">[</span><span class="nx">error</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+              <span class="k">return</span> <span class="nx">ToastService</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error_message</span><span class="p">);</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+
+        <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>As you can see, we start by setting the <strong>baseUrl</strong> to avoid writing <code class="highlighter-rouge">/api/</code> on every single request.</p>
+
+<p>Then we’re setting some default headers. We’re sending an accept header as part of the content negotiation process. But that’s outside the scope of this article. (Let me know in the comments if you’d like to have an article on content negotiation using dingo/api)</p>
+
+<p>Then we’re setting an error interceptor. Which is a function that gets called <strong>every-time</strong> the API call encounters an <strong>error</strong>.<br>
+We can then extract the <em>response status</em> and perform specific actions based on it. <br>
+We know for sure that Laravel returns a response status of <strong>422</strong> whenever the validation fails.
+That’s how we’re able to show the first error message that we get from the API.<br>
+By the way, <code class="highlighter-rouge">ToastService</code> is just a helper service that opens Toast messages (using <a href="https://material.angularjs.org/">Angular Material</a>).</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Querying our API can now be done as following:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>There’s no need to write the error function anymore, because that’s being handled by the error interceptor. We know that if the <code class="highlighter-rouge">title</code> for example doesn’t validate correctly, we’ll automatically get a toast message saying that.</p>
+
+<h3 id="what-if-">What if …</h3>
+
+<p>What if for a specific scenario, you need to perform another action?
+That’s easy. Just pass in your custom error handler as the second argument for the <code class="highlighter-rouge">then</code> function.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="nx">API</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'products'</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">title</span><span class="p">,</span> <span class="nx">price</span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span>
+<span class="p">},</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//response.status</span>
+    <span class="c1">//response.data</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Note that this action will be performed as well as the error interceptor.</p>
+
+<h2 id="prefer-a-screencast">Prefer a screencast?</h2>
+
+<p>This topic is also discussed in the below screencast</p>
+
+<iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/RHQNpw-XmpI" frameborder="0" allowfullscreen=""></iframe>
+
+<hr>
+
+<p>If you like this post, you can
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/&amp;text=Angular%20error%20interceptors&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+  share it with your followers</a>.
+<br>
+<br></p>
+
+<style>
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 0 0px;
+    text-align: center;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
+</style>
+
+<div id="mlb2-1918333" class="ml-subscribe-form ml-subscribe-form-1918333" style="margin-top: 15px;">
+    <div class="ml-vertical-align-center">
+        <div class="subscribe-form ml-block-success" style="display:none">
+            <div class="form-section">
+                <h4>Thanks for subscribing. Stay tuned!</h4>
+            </div>
+        </div>
+        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/o2d1h0" data-code="o2d1h0" method="POST" target="_blank">
+            <div class="subscribe-form">
+                <div class="form-section">
+                    <h2 style="font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;">Stay in the loop</h2>
+                    <p></p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                        <input type="hidden" name="ml-submit" value="1">
+                        <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
+                            <button type="submit" class="primary">
+                                Subscribe
+                            </button>
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
                             </button>
                         </div>
                     </div>
@@ -663,7 +957,8 @@ That’s easy. Just pass in your custom error handler as the second argument for
 <p>Consistency is one of the most important aspects to consider when building an <strong>API</strong>.
 You often find yourself returning 2 types of responses; one for success and one for errors.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">PostsController</span>
 <span class="p">{</span>
@@ -691,7 +986,7 @@ You often find yourself returning 2 types of responses; one for success and one 
 </code></pre>
 </div>
 
-<p>As you can see, we are returning error responses in a specific format, and success responses in a different format.<br />
+<p>As you can see, we are returning error responses in a specific format, and success responses in a different format.<br>
 Soon enough you’ll notice that you’re repeating this over and over again.</p>
 
 <h3 id="using-response-macros">Using response macros</h3>
@@ -701,7 +996,8 @@ allow you to define a macro that can be called on the <code class="highlighter-r
 
 <p>We will create a new <code class="highlighter-rouge">ResponseMacroServiceProvider</code> and define a <code class="highlighter-rouge">success</code> and <code class="highlighter-rouge">error</code> macros inside the <code class="highlighter-rouge">boot</code> function:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">ResponseMacroServiceProvider</span> <span class="k">extends</span> <span class="nx">ServiceProvider</span>
 <span class="p">{</span>
@@ -724,10 +1020,11 @@ allow you to define a macro that can be called on the <code class="highlighter-r
 <span class="p">}</span>
 </code></pre>
 </div>
-<p>We also need to add this ServiceProvider to the <strong>providers</strong> array in <code class="highlighter-rouge">config/app.php</code>.<br />
+<p>We also need to add this ServiceProvider to the <strong>providers</strong> array in <code class="highlighter-rouge">config/app.php</code>.<br>
 So now we can refactor the previous code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">PostsController</span>
 <span class="p">{</span>
@@ -747,18 +1044,18 @@ So now we can refactor the previous code:</p>
 </code></pre>
 </div>
 
-<p>As you can see, <code class="highlighter-rouge">response macros</code> help us remain consistent when returning data from the API. Whether it was a success or an error.<br />
+<p>As you can see, <code class="highlighter-rouge">response macros</code> help us remain consistent when returning data from the API. Whether it was a success or an error.<br>
 This means your front-end API calls will expect a consistent response.</p>
 
 <p>I will write a new tutorial soon on how you can take it a step further in your front-end by implementing Response Interceptors to handle error responses.</p>
 
-<hr />
+<hr>
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&amp;text=Laravel Response Macros for APIs&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&amp;text=Laravel%20Response%20Macros%20for%20APIs&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
-<br />
-<br /></p>
+<br>
+<br></p>
 
 <style>
     .subscribe-input{
@@ -956,14 +1253,14 @@ This means your front-end API calls will expect a consistent response.</p>
                 </div>
                 <div style="width: 100%;">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
+                        <input type="hidden" name="ml-submit" value="1">
                         <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
                             <button type="submit" class="primary">
                                 Subscribe
                             </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
                             </button>
                         </div>
                     </div>
@@ -1006,13 +1303,13 @@ This means your front-end API calls will expect a consistent response.</p>
 
 <p>Are you going to NDC Oslo? If yes, let me know in the comments!</p>
 
-<hr />
+<hr>
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/&amp;text=NDC Oslo - Scaling large Angular apps&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/&amp;text=NDC%20Oslo%20-%20Scaling%20large%20Angular%20apps&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
-<br />
-<br /></p>
+<br>
+<br></p>
 
 <style>
     .subscribe-input{
@@ -1210,14 +1507,14 @@ This means your front-end API calls will expect a consistent response.</p>
                 </div>
                 <div style="width: 100%;">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
+                        <input type="hidden" name="ml-submit" value="1">
                         <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
                             <button type="submit" class="primary">
                                 Subscribe
                             </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
                             </button>
                         </div>
                     </div>
@@ -1240,7 +1537,7 @@ This means your front-end API calls will expect a consistent response.</p>
   <div class="post">
     <h1 class="post-title">
       <a href="/2016/03/13/screencast-tutorial/">
-        Laravel & Angular tutorial screencast
+        Laravel &amp; Angular tutorial screencast
       </a>
     </h1>
 
@@ -1250,13 +1547,13 @@ This means your front-end API calls will expect a consistent response.</p>
 
 <iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/_ZWV9KBK2N8" frameborder="0" allowfullscreen=""></iframe>
 
-<hr />
+<hr>
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/&amp;text=Laravel &amp; Angular tutorial screencast&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/&amp;text=Laravel%20&amp;%20Angular%20tutorial%20screencast&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
-<br />
-<br /></p>
+<br>
+<br></p>
 
 <style>
     .subscribe-input{
@@ -1454,285 +1751,14 @@ This means your front-end API calls will expect a consistent response.</p>
                 </div>
                 <div style="width: 100%;">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
+                        <input type="hidden" name="ml-submit" value="1">
                         <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
                             <button type="submit" class="primary">
                                 Subscribe
                             </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <script>
-            function ml_webform_success_1918333() {
-                jQuery('.ml-subscribe-form-1918333 .ml-block-success').show();
-                jQuery('.ml-subscribe-form-1918333 .ml-block-form').hide();
-            };
-        </script>
-    </div>
-</div>
-<script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.js?v25"></script>
-
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/03/08/laravel-angular-3-1/">
-        Laravel Angular Material Starter v3.1
-      </a>
-    </h1>
-
-    <span class="post-date">08 Mar 2016</span>
-
-    <p><a href="http://laravel-angular.io" target="_blank">Laravel Angular Material Starter</a> has recently hit version 3.1<br />
-I would like to thank all the contributors and users for making it possible.</p>
-
-<h3 id="whats-new">What’s new?</h3>
-
-<p>Here are some of the goodies available as of v3.1:</p>
-
-<ul>
-  <li>Based on a fresh Laravel 5.2 installation</li>
-  <li>Angular 1.5 (with components support)</li>
-  <li>Improved folder structure for components &amp; pages</li>
-  <li>Faster Elixir task</li>
-  <li>EcmaScript 6 support (thanks to <a href="https://github.com/jadsalhani" target="_blank">@jadsalhani</a>)</li>
-</ul>
-
-<p>Your EcmaScript 6 code will be transpiled into browser compliant EcmaScript 5 code.</p>
-
-<p>Checkout the <a href="https://laravel-angular.readme.io/docs/overview#whats-new-in-31" target="_blank">official documentation</a> for more info.</p>
-
-<h3 id="looking-to-upgrade">Looking to Upgrade?</h3>
-
-<p>Follow the <a href="https://laravel-angular.readme.io/docs/upgrade-guide" target="_blank">Upgrade Guide</a> ;)</p>
-
-<h3 id="whats-next">What’s next?</h3>
-
-<p>Expect some detailed screencasts very soon!</p>
-
-<p>One of the screencasts will cover the tutorial available in the documentation.</p>
-
-<p>The main features planned for version 3.2 will be an awesome <code class="highlighter-rouge">artisan ng:auth</code> generator and/or an out of the box JWT authentication. Feel free to mention what you would like to see as a new feature in the comments below!</p>
-
-<hr />
-
-<p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1/&amp;text=Laravel Angular Material Starter v3.1&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
-  share it with your followers</a>.
-<br />
-<br /></p>
-
-<style>
-    .subscribe-input{
-      border: 0 !important;
-      height: 56px;
-      margin-bottom: 20px;
-      margin-right: 20px;
-      border-radius: 4px;
-      padding: 0 20px;
-      outline: none;
-      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
-      background-color: white !important;
-      flex: 1 0 auto;
-      font-family: PT Serif, Helvetica, Arial, sans-serif;
-  }
-
-  #mlb2-1918333,
-  #mlb2-1918333 *,
-  #mlb2-1918333 a:hover,
-  #mlb2-1918333 a:visited,
-  #mlb2-1918333 a:active {
-    overflow: visible;
-    position: static;
-    background: none;
-    border: none;
-    bottom: auto;
-    clear: none;
-    cursor: default;
-    float: none;
-    font-size: medium;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
-    text-indent: 0;
-    text-transform: none;
-    visibility: visible;
-    white-space: normal;
-    max-height: none;
-    max-width: none;
-    left: auto;
-    min-height: 0;
-    min-width: 0;
-    right: auto;
-    top: auto;
-    width: auto;
-    z-index: auto;
-    text-shadow: none;
-    box-shadow: none;
-}
-
-#mlb2-1918333 h4 {
-    font-weight: normal;
-}
-
-#mlb2-1918333 .subscribe-form {
-    padding: 20px;
-    width: 100%;
-    /* max-width: 300px; */
-    margin: 0 auto 0;
-    background-color: #f2f2f2;
-}
-
-#mlb2-1918333 .subscribe-form .form-section {
-    /*float: left;*/
-    /*width: 100%;*/
-}
-
-#mlb2-1918333 .subscribe-form .form-section h4 {
-    margin: 0px 0px 0 0px;
-    text-align: center;
-    padding: 0px!important;
-    color: #27AE60!important;
-    font-size: 20px!important;
-    line-height: 100%;
-}
-
-#mlb2-1918333 .subscribe-form .form-section p {
-    line-height: 150%;
-    padding: 0px!important;
-    margin: 0px 0px 0px 0px;
-    color: #000000!important;
-    font-size: 13px!important;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
-    line-height: 150%;
-    padding: 0px!important;
-    margin: 0px 0px 0px 0px;
-    margin-bottom: 15px!important;
-    color: #000000!important;
-    font-size: 12px!important;
-    font-weight: normal !important;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
-    margin-right: 5px!important;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .form-group {
-    margin-bottom: 15px;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .form-group label {
-    float: left;
-    margin-bottom: 10px;
-    width: 100%;
-    line-height: 100%;
-    font-weight: bold;
-    color: #000000!important;
-    font-size: 13px!important;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .checkbox {
-    width: 100%;
-    margin: 0px 0px 10px 0px;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .checkbox label {
-    color: #000000!important;
-    font-size: 13px!important;
-}
-
-#mlb2-1918333 .subscribe-form .form-section .checkbox input {
-    margin: 0px 5px 0px 0px;
-}
-
-#mlb2-1918333.ml-subscribe-form .form-group .form-control {
-    width: 100%;
-    font-size: 13px;
-    padding: 10px 10px;
-    height: auto;
-    border-radius: 5px;
-    border: 2px solid #BDC3C7!important;
-    color: #000000!important;
-    background-color: #FFFFFF!important;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    clear: left;
-}
-
-#mlb2-1918333.ml-subscribe-form button {
-    font-family: PT Serif, Helvetica, Arial, sans-serif;;
-    border: none !important;
-    cursor: pointer !important;
-    width: 150px !important;
-    min-width: 150px !important;
-    border-radius: 4px !important;
-    height: 56px !important;
-    background-color: #1565C0!important;
-    color: #FFFFFF!important;
-    font-size: 16px!important;
-    text-align: center !important;
-    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
-}
-
-#mlb2-1918333.ml-subscribe-form button[disabled] {
-    cursor: not-allowed!important;
-}
-
-#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
-    color: red!important;
-}
-
-#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
-    color: red!important;
-}
-
-#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
-    border-color: red!important;
-}
-
-@media (max-width: 480px){
-    .subscribe-input{
-        margin-right: 0;
-    }
-    #mlb2-1918333.ml-subscribe-form button {
-        width: 100% !important;
-    }  
-}
-</style>
-
-<div id="mlb2-1918333" class="ml-subscribe-form ml-subscribe-form-1918333" style="margin-top: 15px;">
-    <div class="ml-vertical-align-center">
-        <div class="subscribe-form ml-block-success" style="display:none">
-            <div class="form-section">
-                <h4>Thanks for subscribing. Stay tuned!</h4>
-            </div>
-        </div>
-        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/o2d1h0" data-code="o2d1h0" method="POST" target="_blank">
-            <div class="subscribe-form">
-                <div class="form-section">
-                    <h2 style="font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;">Stay in the loop</h2>
-                    <p></p>
-                </div>
-                <div style="width: 100%;">
-                    <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
-                        <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
-                            <button type="submit" class="primary">
-                                Subscribe
-                            </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
                             </button>
                         </div>
                     </div>
@@ -1756,7 +1782,7 @@ I would like to thank all the contributors and users for making it possible.</p>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>

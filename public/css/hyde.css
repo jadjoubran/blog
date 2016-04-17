@@ -311,3 +311,8 @@ kbd{
 small{
   font-size: 12px;
 }
+
+.emoji{
+  display: inline-block;
+  margin: initial;
+}

@@ -4,13 +4,296 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-04-06T14:51:53+03:00</updated>
+ <updated>2016-04-17T18:56:17+03:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>The story of Laravel & Angular material starter</title>
+   <link href="http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/"/>
+   <updated>2016-04-17T00:00:00+03:00</updated>
+   <id>http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter</id>
+   <content type="html">&lt;p&gt;Today I’m writing because &lt;strong&gt;Laravel &amp;amp; Angular material starter&lt;/strong&gt; has reached &lt;strong&gt;1,000 stars&lt;/strong&gt; on github!&lt;/p&gt;
+&lt;iframe class=&quot;DemoHeader-github&quot; src=&quot;https://ghbtns.com/github-btn.html?user=jadjoubran&amp;amp;repo=laravel5-angular-material-starter&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;160px&quot; height=&quot;30px&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It’s now one of the top 250 PHP projects on github. And the screencasts have just surpassed &lt;strong&gt;10,000 views&lt;/strong&gt;! :rocket:&lt;/p&gt;
+
+&lt;p&gt;I would like to take this opportunity to thank all the &lt;a href=&quot;https://github.com/jadjoubran/laravel5-angular-material-starter/graphs/contributors&quot; target=&quot;_blank&quot;&gt;contributors&lt;/a&gt; on the project. Especially those who have recently contributed to &lt;strong&gt;3.1&lt;/strong&gt; and &lt;strong&gt;3.2&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jadsalhani&quot; target=&quot;_blank&quot;&gt;Jad Salhani&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kujtimiihoxha&quot; target=&quot;_blank&quot;&gt;Kujtim Hoxha&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/shiruken1&quot; target=&quot;_blank&quot;&gt;Andres M.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/GrahamCampbell&quot; target=&quot;_blank&quot;&gt;Graham Campbell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/flick36&quot; target=&quot;_blank&quot;&gt;Allan Alvarez Ortiz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also all the other contributors who have been asking questions and discovering bugs on Github!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-started&quot;&gt;How it started&lt;/h2&gt;
+
+&lt;p&gt;A few months ago, I was building a commercial project for a client. I needed to use Laravel for sure.&lt;br /&gt;
+But I also wanted to use Angular to make the UI reactive &amp;amp; I was particularly interested in the powerful components offered by Angular Material.&lt;/p&gt;
+
+&lt;p&gt;After spending over 40 hours on the setup for Laravel &amp;amp; Angular (which by the way, wasn’t that good), 
+I noticed that open sourcing this setup would benefit a lot of users.&lt;/p&gt;
+
+&lt;p&gt;A few weeks later, it got featured on &lt;a href=&quot;https://laravel-news.com/2015/05/laravel-and-angular-material-starter-project/&quot; target=&quot;_blank&quot;&gt;Laravel News&lt;/a&gt;. Since then, people started opening issues and tinkering with it.&lt;/p&gt;
+
+&lt;p&gt;The top priority has been to provide people with best practices for Angular apps that use a Laravel API. I can’t claim that it’s perfect, so if you have some feedback make sure to open a new issue!&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s next&lt;/h2&gt;
+
+&lt;p&gt;In a couple of weeks, &lt;strong&gt;version 3.2&lt;/strong&gt; will be out. It will feature out of the box JWT Authentication and password resets. Here’s what has been &lt;a href=&quot;https://github.com/jadjoubran/laravel5-angular-material-starter/blob/master/CHANGELOG.md#changelog&quot; target=&quot;blank&quot;&gt;added so far&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m also working on better documentation by adding beginner friendly installation and more screencasts.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-angular-2&quot;&gt;What about Angular 2?&lt;/h2&gt;
+
+&lt;p&gt;Angular 2 is just around the corner. Hence the next logical step is to start working on Angular 2 with typescript support. This will become a priority as soon as 3.2 is released!&lt;/p&gt;
+
+&lt;h2 id=&quot;anonymous-survey&quot;&gt;Anonymous survey&lt;/h2&gt;
+
+&lt;p&gt;Community feedback has always been very important. That’s why I put together a 1 minute anonymous survey. No name, no email. I would love to know more how you’re using this starter project and how it can be better.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/forms/d/1_LOQzMzhJr6f5eW5W1cb37dzbE8JelP_AkqbQJ-fR4g/viewform&quot;&gt;Anonymous survey&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:heart:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you like this post, you can
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/&amp;amp;text=The story of Laravel &amp;amp; Angular material starter&amp;amp;via=joubranjad&amp;amp;related=joubranjad&quot; target=&quot;_blank&quot;&gt;
+  share it with your followers&lt;/a&gt;.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;style&gt;
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 0 0px;
+    text-align: center;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type=&quot;checkbox&quot;] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;mlb2-1918333&quot; class=&quot;ml-subscribe-form ml-subscribe-form-1918333&quot; style=&quot;margin-top: 15px;&quot;&gt;
+    &lt;div class=&quot;ml-vertical-align-center&quot;&gt;
+        &lt;div class=&quot;subscribe-form ml-block-success&quot; style=&quot;display:none&quot;&gt;
+            &lt;div class=&quot;form-section&quot;&gt;
+                &lt;h4&gt;Thanks for subscribing. Stay tuned!&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;ml-block-form&quot; action=&quot;//app.mailerlite.com/webforms/submit/o2d1h0&quot; data-code=&quot;o2d1h0&quot; method=&quot;POST&quot; target=&quot;_blank&quot;&gt;
+            &lt;div class=&quot;subscribe-form&quot;&gt;
+                &lt;div class=&quot;form-section&quot;&gt;
+                    &lt;h2 style=&quot;font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;&quot;&gt;Stay in the loop&lt;/h2&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div style=&quot;width: 100%;&quot;&gt;
+                    &lt;div class=&quot;form-group ml-field-email ml-validate-required ml-validate-email&quot;&gt;
+                        &lt;input type=&quot;hidden&quot; name=&quot;ml-submit&quot; value=&quot;1&quot; /&gt;
+                        &lt;div class=&quot;subscribe-form&quot; id=&quot;subs-form&quot; style=&quot;display: flex;padding-bottom: 0;padding-top:0;&quot;&gt;
+                            &lt;input type=&quot;email&quot; name=&quot;fields[email]&quot; class=&quot;subscribe-input&quot; placeholder=&quot;Your e-mail address&quot; value=&quot;&quot; /&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;primary&quot;&gt;
+                                Subscribe
+                            &lt;/button&gt;
+                            &lt;button disabled=&quot;disabled&quot; style=&quot;display: none;&quot; type=&quot;button&quot; class=&quot;loading&quot;&gt;
+                                &lt;img src=&quot;//static.mailerlite.com/images/rolling.gif&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;width: 20px; height: 20px; margin: 0 auto;&quot; /&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;script&gt;
+            function ml_webform_success_1918333() {
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-success&#39;).show();
+                jQuery(&#39;.ml-subscribe-form-1918333 .ml-block-form&#39;).hide();
+            };
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static.mailerlite.com/js/w/webforms.js?v25&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Angular error interceptors</title>

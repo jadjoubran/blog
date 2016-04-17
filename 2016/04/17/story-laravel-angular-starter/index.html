@@ -11,7 +11,7 @@
 
   <title>
     
-      Laravel Response Macros for APIs &middot; Jad Joubran
+      The story of Laravel &amp; Angular material starter · Jad Joubran
     
   </title>
 
@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans%7CPT+Serif" rel="stylesheet" type="text/css">
   
-  <meta name="google-site-verification" content="hEU7cFvGBqiXCWOj9XV_OrB3elwIAwYQMqpoLrubXQU" />
+  <meta name="google-site-verification" content="hEU7cFvGBqiXCWOj9XV_OrB3elwIAwYQMqpoLrubXQU">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
@@ -90,7 +90,7 @@
     <!-- <hr>
 
 If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&text=Laravel Response Macros for APIs&via=joubranjad&related=joubranjad" 
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/&text=The story of Laravel & Angular material starter&via=joubranjad&related=joubranjad" 
    target="_blank">
   share it with your followers</a>.
 <br>
@@ -317,120 +317,71 @@ If you like this post, you can
 
   </div>
   <div class="sidebar-footer">
-    <iframe src="https://ghbtns.com/github-btn.html?user=jadjoubran&type=follow&count=false&size=small" frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-    <p>&copy; 2016. All rights reserved.</p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=jadjoubran&amp;type=follow&amp;count=false&amp;size=small" frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+    <p>© 2016. All rights reserved.</p>
   </div>
 </div>
 
   <div class="content container">
 
     <div class="post">
-  <h1 class="post-title">Laravel Response Macros for APIs</h1>
-  <span class="post-date">27 Mar 2016</span>
+  <h1 class="post-title">The story of Laravel &amp; Angular material starter</h1>
+  <span class="post-date">17 Apr 2016</span>
 
-  <p>I would like to show you a use case for response macros when building an API with Laravel.</p>
+  <p>Today I’m writing because <strong>Laravel &amp; Angular material starter</strong> has reached <strong>1,000 stars</strong> on github!</p>
+<iframe class="DemoHeader-github" src="https://ghbtns.com/github-btn.html?user=jadjoubran&amp;repo=laravel5-angular-material-starter&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-<h3 id="dealing-with-apis">Dealing with APIs</h3>
+<p>It’s now one of the top 250 PHP projects on github. And the screencasts have just surpassed <strong>10,000 views</strong>! <img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle"></p>
 
-<p>Consistency is one of the most important aspects to consider when building an <strong>API</strong>.
-You often find yourself returning 2 types of responses; one for success and one for errors.</p>
+<p>I would like to take this opportunity to thank all the <a href="https://github.com/jadjoubran/laravel5-angular-material-starter/graphs/contributors" target="_blank">contributors</a> on the project. Especially those who have recently contributed to <strong>3.1</strong> and <strong>3.2</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<ul>
+  <li><a href="https://github.com/jadsalhani" target="_blank">Jad Salhani</a></li>
+  <li><a href="https://github.com/kujtimiihoxha" target="_blank">Kujtim Hoxha</a></li>
+  <li><a href="https://github.com/shiruken1" target="_blank">Andres M.</a></li>
+  <li><a href="https://github.com/GrahamCampbell" target="_blank">Graham Campbell</a></li>
+  <li><a href="https://github.com/flick36" target="_blank">Allan Alvarez Ortiz</a></li>
+</ul>
 
-<span class="k">class</span> <span class="nc">PostsController</span>
-<span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="c1">//some code
-</span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
-      <span class="c1">//error
-</span>      <span class="k">return</span> <span class="p">[</span>
-        <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span>
-      <span class="p">];</span>
-    <span class="p">}</span>
+<p>Also all the other contributors who have been asking questions and discovering bugs on Github!</p>
 
-    <span class="nv">$posts</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">get</span><span class="p">();</span>
-  
-    <span class="c1">//success
-</span>    <span class="k">return</span> <span class="p">[</span>
-      <span class="s1">'errors'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s1">'data'</span>   <span class="o">=&gt;</span> <span class="nb">compact</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">)</span>
-    <span class="p">];</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<h2 id="how-it-started">How it started</h2>
 
-<p>As you can see, we are returning error responses in a specific format, and success responses in a different format.<br />
-Soon enough you’ll notice that you’re repeating this over and over again.</p>
+<p>A few months ago, I was building a commercial project for a client. I needed to use Laravel for sure.<br>
+But I also wanted to use Angular to make the UI reactive &amp; I was particularly interested in the powerful components offered by Angular Material.</p>
 
-<h3 id="using-response-macros">Using response macros</h3>
+<p>After spending over 40 hours on the setup for Laravel &amp; Angular (which by the way, wasn’t that good), 
+I noticed that open sourcing this setup would benefit a lot of users.</p>
 
-<p><a href="https://laravel.com/docs/5.2/responses#response-macros" target="_blank">Response macros</a>
-allow you to define a macro that can be called on the <code class="highlighter-rouge">response()</code> function.</p>
+<p>A few weeks later, it got featured on <a href="https://laravel-news.com/2015/05/laravel-and-angular-material-starter-project/" target="_blank">Laravel News</a>. Since then, people started opening issues and tinkering with it.</p>
 
-<p>We will create a new <code class="highlighter-rouge">ResponseMacroServiceProvider</code> and define a <code class="highlighter-rouge">success</code> and <code class="highlighter-rouge">error</code> macros inside the <code class="highlighter-rouge">boot</code> function:</p>
+<p>The top priority has been to provide people with best practices for Angular apps that use a Laravel API. I can’t claim that it’s perfect, so if you have some feedback make sure to open a new issue!</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<h2 id="whats-next">What’s next</h2>
 
-<span class="k">class</span> <span class="nc">ResponseMacroServiceProvider</span> <span class="k">extends</span> <span class="nx">ServiceProvider</span>
-<span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">boot</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="nx">Response</span><span class="o">::</span><span class="na">macro</span><span class="p">(</span><span class="s1">'success'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">Response</span><span class="o">::</span><span class="na">json</span><span class="p">([</span>
-          <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">,</span>
-        <span class="p">]);</span>
-    <span class="p">});</span>
+<p>In a couple of weeks, <strong>version 3.2</strong> will be out. It will feature out of the box JWT Authentication and password resets. Here’s what has been <a href="https://github.com/jadjoubran/laravel5-angular-material-starter/blob/master/CHANGELOG.md#changelog" target="blank">added so far</a>.</p>
 
-    <span class="nx">Response</span><span class="o">::</span><span class="na">macro</span><span class="p">(</span><span class="s1">'error'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="nv">$status</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">Response</span><span class="o">::</span><span class="na">json</span><span class="p">([</span>
-          <span class="s1">'errors'</span>  <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="s1">'message'</span> <span class="o">=&gt;</span> <span class="nv">$message</span><span class="p">,</span>
-        <span class="p">],</span> <span class="nv">$status</span><span class="p">);</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-<p>We also need to add this ServiceProvider to the <strong>providers</strong> array in <code class="highlighter-rouge">config/app.php</code>.<br />
-So now we can refactor the previous code:</p>
+<p>I’m also working on better documentation by adding beginner friendly installation and more screencasts.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<h2 id="what-about-angular-2">What about Angular 2?</h2>
 
-<span class="k">class</span> <span class="nc">PostsController</span>
-<span class="p">{</span>
-  <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="c1">//some code
-</span>    <span class="p">}</span><span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
-      <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">error</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">);</span>
-    <span class="p">}</span>
+<p>Angular 2 is just around the corner. Hence the next logical step is to start working on Angular 2 with typescript support. This will become a priority as soon as 3.2 is released!</p>
 
-    <span class="nv">$posts</span> <span class="o">=</span> <span class="nx">Post</span><span class="o">::</span><span class="na">get</span><span class="p">();</span>
-  
-    <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">success</span><span class="p">(</span><span class="nb">compact</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">));</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<h2 id="anonymous-survey">Anonymous survey</h2>
 
-<p>As you can see, <code class="highlighter-rouge">response macros</code> help us remain consistent when returning data from the API. Whether it was a success or an error.<br />
-This means your front-end API calls will expect a consistent response.</p>
+<p>Community feedback has always been very important. That’s why I put together a 1 minute anonymous survey. No name, no email. I would love to know more how you’re using this starter project and how it can be better.</p>
 
-<p>I will write a new tutorial soon on how you can take it a step further in your front-end by implementing Response Interceptors to handle error responses.</p>
+<p><a href="https://docs.google.com/forms/d/1_LOQzMzhJr6f5eW5W1cb37dzbE8JelP_AkqbQJ-fR4g/viewform">Anonymous survey</a></p>
 
-<hr />
+<p><img class="emoji" title=":heart:" alt=":heart:" src="https://assets.github.com/images/icons/emoji/unicode/2764.png" height="20" width="20" align="absmiddle"></p>
+
+<hr>
 
 <p>If you like this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/&amp;text=Laravel Response Macros for APIs&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/&amp;text=The%20story%20of%20Laravel%20&amp;%20Angular%20material%20starter&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
   share it with your followers</a>.
-<br />
-<br /></p>
+<br>
+<br></p>
 
 <style>
     .subscribe-input{
@@ -628,14 +579,14 @@ This means your front-end API calls will expect a consistent response.</p>
                 </div>
                 <div style="width: 100%;">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                        <input type="hidden" name="ml-submit" value="1" />
+                        <input type="hidden" name="ml-submit" value="1">
                         <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
-                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="">
                             <button type="submit" class="primary">
                                 Subscribe
                             </button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            <button disabled style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;">
                             </button>
                         </div>
                     </div>
@@ -663,18 +614,18 @@ This means your front-end API calls will expect a consistent response.</p>
     
       <li>
         <h3>
-          <a href="/2016/04/17/story-laravel-angular-starter/">
-            The story of Laravel & Angular material starter
-            <small>17 Apr 2016</small>
+          <a href="/2016/04/05/angular-error-interceptor/">
+            Angular error interceptors
+            <small>05 Apr 2016</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/2016/04/05/angular-error-interceptor/">
-            Angular error interceptors
-            <small>05 Apr 2016</small>
+          <a href="/2016/03/27/laravel-response-macros-api/">
+            Laravel Response Macros for APIs
+            <small>27 Mar 2016</small>
           </a>
         </h3>
       </li>
@@ -695,8 +646,8 @@ This means your front-end API calls will expect a consistent response.</p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = 'http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/';
-this.page.identifier = "jadjoubran/2016/03/27/laravel-response-macros-api/";
+this.page.url = 'http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/';
+this.page.identifier = "jadjoubran/2016/04/17/story-laravel-angular-starter/";
 };
 
 (function() {
