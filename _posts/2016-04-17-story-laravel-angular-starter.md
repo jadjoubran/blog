@@ -42,7 +42,7 @@ Angular 2 is just around the corner. Hence the next logical step is to start wor
 
 ## Anonymous survey
 
-Community feedback has always been very important. That's why I put together a 1 minute anonymous survey. No name, no email. I would love to know more how you're using this starter project and how it can be better.
+Community feedback has always been very important. That's why I put together a 1 minute anonymous survey. No name, no email. I would love to know more how you're using this starter project and how it can be improved.
 
 [Anonymous survey](https://docs.google.com/forms/d/1_LOQzMzhJr6f5eW5W1cb37dzbE8JelP_AkqbQJ-fR4g/viewform)
 
