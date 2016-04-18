@@ -15,6 +15,7 @@ I would like to take this opportunity to thank all the [contributors](https://gi
 * [Andres M.](https://github.com/shiruken1){:target="_blank"}
 * [Graham Campbell](https://github.com/GrahamCampbell){:target="_blank"}
 * [Allan Alvarez Ortiz](https://github.com/flick36){:target="_blank"}
+* [Nicole Saidy](http://nicolesaidy.com){:target="_blank"} for the visuals & designs
 
 Also all the other contributors who have been asking questions and discovering bugs on Github!
 
