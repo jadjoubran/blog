@@ -14,7 +14,7 @@ Date: June 7th, 2016 (upcoming)
 
 ### JS Day
 
-Talk: [Blazing fast CSS3 Animations](http://2016.jsday.it/talk/blazing-fast-css3-animations/){:target="_blank"}  
+Talk: [Blazing fast CSS3 transitions](http://2016.jsday.it/talk/blazing-fast-css3-transitions/){:target="_blank"}  
 Location: Verona, Italy  
 Date: May 11th, 2016 (upcoming)
 
