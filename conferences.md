@@ -3,48 +3,69 @@ layout: page
 title: Conferences
 ---
 
-Below you can find the conferences where I've been invited to speak. I've enjoyed every single one of them and I'm looking forward to attending more of them.
+Below you can find the conferences where I've been invited to speak. I've enjoyed every single one of them and I'm looking forward to attending more.
+
+<br>
+
+## Upcoming talks & workshops
+<hr>
+
+#### NDC Oslo
+<span class="conferences-ref">Talk:</span> [Scaling large Angular apps](/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Oslo, Norway  
+<span class="conferences-ref">Date:</span> June 7th, 2016
+
+<hr>
+
+#### JS Day
+
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 transitions](http://2016.jsday.it/talk/blazing-fast-css3-transitions/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Verona, Italy  
+<span class="conferences-ref">Date:</span> May 11th, 2016
+
+<br>
+
+## Past talks & workshops
+<hr>
+
+#### B. Startup School Amsterdam
+
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 transitions](http://bssa.nu)  
+<span class="conferences-ref">Location:</span> Amsterdam, Netherlands  
+<span class="conferences-ref">Date:</span> February 23rd, 2016
+
+<hr>
+
+#### PHP Benelux
+
+<span class="conferences-ref">Workshop:</span> [Introduction to Angular using EcmaScript 6](https://conference.phpbenelux.eu/2016/talk/introduction-to-angular-using-ecmascript-6/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Antwerp, Belgium  
+<span class="conferences-ref">Date:</span> January 29th, 2016
+
+<hr>
+
+#### Northeast PHP
+
+<span class="conferences-ref">Talk:</span> [Kickstarting a Laravel app - modern techniques & best practices](http://2015.northeastphp.org/session/kickstarting-a-laravel-application-using-modern-techniques-and-common-best-practices/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Boston, Massachusetts  
+<span class="conferences-ref">Date:</span> August 22nd, 2015
+
+<hr>
+
+#### Dutch PHP Conference
+
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 animations](https://joind.in/event/dutch-php-conference-2015/blazing-fast-css3-animations){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Amsterdam, Netherlands  
+<span class="conferences-ref">Date:</span> June 27th, 2015
 
 
-### NDC Oslo
-Talk: [Scaling large Angular apps](/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
-Location: Oslo, Norway  
-Date: June 7th, 2016 (upcoming)
+<span class="conferences-ref">Workshop:</span> [Building real-time web apps](https://joind.in/event/dutch-php-conference-2015/building-realtime-web-apps){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Amsterdam, Netherlands  
+<span class="conferences-ref">Date:</span> June 25th, 2015
 
-
-### JS Day
-
-Talk: [Blazing fast CSS3 transitions](http://2016.jsday.it/talk/blazing-fast-css3-transitions/){:target="_blank"}  
-Location: Verona, Italy  
-Date: May 11th, 2016 (upcoming)
-
-
-### PHP Benelux
-
-Workshop: [Introduction to Angular using EcmaScript 6](https://conference.phpbenelux.eu/2016/talk/introduction-to-angular-using-ecmascript-6/){:target="_blank"}  
-Location: Antwer, Belgium  
-Date: January 29th, 2016
-
-
-### Northeast PHP
-
-Talk: [Kickstarting a Laravel app - modern techniques & best practices](http://2015.northeastphp.org/session/kickstarting-a-laravel-application-using-modern-techniques-and-common-best-practices/){:target="_blank"}  
-Location: Boston, Massachusetts  
-Date: August 22nd, 2015
-
-
-### Dutch PHP Conference
-
-Talk: [Blazing fast CSS3 animations](https://joind.in/event/dutch-php-conference-2015/blazing-fast-css3-animations){:target="_blank"}  
-Location: Amsterdam, Netherlands  
-Date: June 27th, 2015
-
-
-Workshop: [Building real-time web apps](https://joind.in/event/dutch-php-conference-2015/building-realtime-web-apps){:target="_blank"}  
-Location: Amsterdam, Netherlands  
-Date: June 25th, 2015
-
+<hr>
 
 ## Interested in having me at your conference?
 
-Feel free to email me. You can find my email on my [github profile](https://github.com/jadjoubran){:target="_blank"}
+Feel free to email me on <a href="mailto:joubran.jad@gmail.com">joubran.jad@gmail.com</a>.  
+You can also check out my [github profile](https://github.com/jadjoubran){:target="_blank"}

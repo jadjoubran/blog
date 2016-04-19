@@ -316,3 +316,7 @@ small{
   display: inline-block;
   margin: initial;
 }
+
+.conferences-ref{
+  color: #888;
+}
