@@ -22,7 +22,7 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 14th, 2016
 
-<span class="conferences-ref">Talk:</span> [Got 10 minutes to learn EcmaScript 6?](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Lightning Talk:</span> [Got 10 minutes to learn EcmaScript 6?](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 14th, 2016
 
@@ -96,5 +96,5 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 ## Interested in having me at your conference?
 
-Feel free to email me on <a href="mailto:joubran.jad@gmail.com">joubran.jad@gmail.com</a>.  
+Feel free to email me on <a href="mailto:joubran.jad@gmail.com">joubran.jad@gmail.com</a>  
 You can also check out my [github profile](https://github.com/jadjoubran){:target="_blank"}
