@@ -10,8 +10,37 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
+#### NDC Sydney
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 Transitions](http://ndcsydney.com/talk/blazing-fast-css3-animations/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Sydney, Australia  
+<span class="conferences-ref">Date:</span> August 5th, 2016
+
+<hr>
+
+#### FullStack London
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 transitions](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> July 14th, 2016
+
+<span class="conferences-ref">Talk:</span> [Got 10 minutes to learn EcmaScript 6?](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> July 14th, 2016
+
+<span class="conferences-ref">Talk:</span> [Introduction to Angular using EcmaScript 6](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> July 13th, 2016
+
+<hr>
+
 #### NDC Oslo
 <span class="conferences-ref">Talk:</span> [Scaling large Angular apps](/2016/03/24/ndc-oslo-angular/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Oslo, Norway  
+<span class="conferences-ref">Date:</span> June 8th, 2016
+
+<hr>
+
+#### Angular Oslo
+<span class="conferences-ref">Talk:</span> [Introduction to Angular using EcmaScript 6](http://www.meetup.com/AngularJS-Oslo/events/230683470/){:target="_blank"}  
 <span class="conferences-ref">Location:</span> Oslo, Norway  
 <span class="conferences-ref">Date:</span> June 7th, 2016
 
