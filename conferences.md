@@ -57,6 +57,14 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Past talks & workshops
 <hr>
 
+#### CME
+
+<span class="conferences-ref">Workshop:</span> [Introduction to Angular using EcmaScript 6](http://gotocme.com/)  
+<span class="conferences-ref">Location:</span> Beirut, Lebanon  
+<span class="conferences-ref">Date:</span> April 28th, 2016
+
+<hr>
+
 #### B. Startup School Amsterdam
 
 <span class="conferences-ref">Talk:</span> [Blazing fast CSS3 transitions](http://bssa.nu)  
