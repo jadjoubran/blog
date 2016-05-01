@@ -52,6 +52,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> Verona, Italy  
 <span class="conferences-ref">Date:</span> May 11th, 2016
 
+<hr>
+
+#### Saint Joseph University
+<span class="conferences-ref">Talk:</span> [Break the Cycle](http://www.usj.edu.lb/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Beirut, Lebanon  
+<span class="conferences-ref">Date:</span> May 5th, 2016
+
 <br>
 
 ## Past talks & workshops
