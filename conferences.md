@@ -22,11 +22,11 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 14th, 2016
 
-<span class="conferences-ref">Lightning Talk:</span> [Got 10 minutes to learn EcmaScript 6?](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Lightning Talk:</span> [Got 10 minutes to learn ES2015?](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 14th, 2016
 
-<span class="conferences-ref">Talk:</span> [Introduction to Angular using EcmaScript 6](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
+<span class="conferences-ref">Talk:</span> [Introduction to Angular using ES2015](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 13th, 2016
 
@@ -40,10 +40,14 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <hr>
 
 #### Angular Oslo
-<span class="conferences-ref">Talk:</span> [Introduction to Angular using EcmaScript 6](http://www.meetup.com/AngularJS-Oslo/events/230683470/){:target="_blank"}  
+<span class="conferences-ref">Talk:</span> [Introduction to Angular using ES2015](http://www.meetup.com/AngularJS-Oslo/events/230683470/){:target="_blank"}  
 <span class="conferences-ref">Location:</span> Oslo, Norway  
 <span class="conferences-ref">Date:</span> June 7th, 2016
 
+
+<br>
+
+## Past talks & workshops
 <hr>
 
 #### JS Day
@@ -59,14 +63,11 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> Beirut, Lebanon  
 <span class="conferences-ref">Date:</span> May 5th, 2016
 
-<br>
-
-## Past talks & workshops
 <hr>
 
 #### CME
 
-<span class="conferences-ref">Workshop:</span> [Introduction to Angular using EcmaScript 6](http://gotocme.com/)  
+<span class="conferences-ref">Workshop:</span> [Introduction to Angular using ES2015](http://gotocme.com/)  
 <span class="conferences-ref">Location:</span> Beirut, Lebanon  
 <span class="conferences-ref">Date:</span> April 28th, 2016
 
