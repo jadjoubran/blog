@@ -3,6 +3,8 @@
     "public/css/**.css",
     "index.html",
     "conferences/index.html",
-    "about/index.html"
+    "about/index.html",
+    "archive/index.html",
+    "2016/**/**/*.html"
   ]
 }

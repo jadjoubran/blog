@@ -29,7 +29,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["about/index.html","2579ba66e08942586c27d6064656b0cf"],["conferences/index.html","91d7bd6ff0b2dca70e0dce50a6a261f2"],["index.html","5896d4b8359331c7ba302d4abbeee564"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
+var PrecacheConfig = [["2016/03/08/laravel-angular-3-1/index.html","0092a1d34d00ab3d2aca70305320663e"],["2016/03/13/screencast-tutorial/index.html","37c00b918afa3ecd3f4ff4ce647c6a47"],["2016/03/24/ndc-oslo-angular/index.html","0c10ccfb290c5d610e53788a3828b687"],["2016/03/27/laravel-response-macros-api/index.html","d5c9db7d6d1037e613dd05adaf721fe5"],["2016/04/05/angular-error-interceptor/index.html","c50ada44d2c7f8ef358669fc0a5dd3b7"],["2016/04/17/story-laravel-angular-starter/index.html","9d6d37a2af22211f36c76051497f77cc"],["about/index.html","2579ba66e08942586c27d6064656b0cf"],["archive/index.html","9970e50ae4fd0cb3ceb811768e17d79c"],["conferences/index.html","91d7bd6ff0b2dca70e0dce50a6a261f2"],["index.html","5896d4b8359331c7ba302d4abbeee564"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-sw-precache-' + (self.registration ? self.registration.scope : '') + '-';
 
