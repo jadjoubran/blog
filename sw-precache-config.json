@@ -1,8 +1,8 @@
 {
   "staticFileGlobs": [
     "public/css/**.css",
-    "public/index.html",
-    "images/**.*"
-  ],
-  "stripPrefix": "public/"
+    "index.html",
+    "conferences/index.html",
+    "about/index.html"
+  ]
 }
