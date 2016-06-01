@@ -16,5 +16,12 @@
 
   {% include analytics.html %}
 
+  <script>
+  if('serviceWorker' in navigator){
+  	navigator.serviceWorker.register('/service-worker.js').then(function() {
+  	});
+  }
+  </script>
+
 </body>
 </html>
