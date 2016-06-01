@@ -456,5 +456,12 @@ You can also check out my <a href="https://github.com/jadjoubran" target="_blank
 
 </script>
 
+  <script>
+  if('serviceWorker' in navigator){
+  	navigator.serviceWorker.register('/service-worker.js').then(function() {
+  	});
+  }
+  </script>
+
 </body>
 </html>

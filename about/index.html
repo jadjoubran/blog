@@ -353,5 +353,12 @@ Very early on, at the age of 19, I founded <a href="https://www.etobb.com/" targ
 
 </script>
 
+  <script>
+  if('serviceWorker' in navigator){
+  	navigator.serviceWorker.register('/service-worker.js').then(function() {
+  	});
+  }
+  </script>
+
 </body>
 </html>

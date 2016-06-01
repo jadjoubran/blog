@@ -627,5 +627,12 @@ I would like to thank all the contributors and users for making it possible.</p>
 
 </script>
 
+  <script>
+  if('serviceWorker' in navigator){
+  	navigator.serviceWorker.register('/service-worker.js').then(function() {
+  	});
+  }
+  </script>
+
 </body>
 </html>
