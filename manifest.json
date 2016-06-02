@@ -1,0 +1,14 @@
+{
+  "lang": "en-us",
+  "background_color": "#202020",
+  "name": "Jad Joubran | Sharing my passion for code",
+  "short_name": "Jad Joubran",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "public/icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}
