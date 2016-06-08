@@ -30,6 +30,9 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> London, United Kingdom  
 <span class="conferences-ref">Date:</span> July 13th, 2016
 
+<br>
+
+## Past talks & workshops
 <hr>
 
 #### NDC Oslo
@@ -45,9 +48,6 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Date:</span> June 7th, 2016
 
 
-<br>
-
-## Past talks & workshops
 <hr>
 
 #### JS Day
