@@ -3,6 +3,7 @@
   "background_color": "#202020",
   "name": "Jad Joubran | Sharing my passion for code",
   "short_name": "Jad Joubran",
+  "start_url": "?homescreen=1",
   "display": "standalone",
   "icons": [
     {
