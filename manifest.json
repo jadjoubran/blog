@@ -4,6 +4,7 @@
   "name": "Jad Joubran | Sharing my passion for code",
   "short_name": "Jad Joubran",
   "display": "standalone",
+  "start_url": "?homescreen=1",
   "icons": [
     {
       "src": "public/icon.png",
