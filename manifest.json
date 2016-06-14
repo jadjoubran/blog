@@ -1,9 +1,9 @@
 {
   "lang": "en-us",
   "background_color": "#202020",
-  "name": "Jad Joubran | Sharing my passion for code",
+  "name": "Jad Joubran | Blog",
   "short_name": "Jad Joubran",
-  "start_url": "?homescreen=1",
+  "start_url": "/?homescreen=1",
   "display": "standalone",
   "icons": [
     {
