@@ -21,6 +21,14 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Past talks & workshops
 <hr>
 
+#### Le Wagon Lisbon
+
+<span class="conferences-ref">Workshop:</span> [Introduction to JavaScript](https://www.lewagon.org/lisbon){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Lisbon, Portugal  
+<span class="conferences-ref">Date:</span> July 20th, 2016
+
+<hr>
+
 #### FullStack London
 <span class="conferences-ref">Talk:</span> [Blazing fast CSS3 transitions](https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things#program){:target="_blank"}  
 <span class="conferences-ref">Location:</span> London, United Kingdom  
