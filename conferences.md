@@ -10,15 +10,30 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
-#### NDC Sydney
-<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 Transitions](http://ndcsydney.com/talk/blazing-fast-css3-animations/){:target="_blank"}  
-<span class="conferences-ref">Location:</span> Sydney, Australia  
-<span class="conferences-ref">Date:</span> August 5th, 2016
+#### Connect.Tech
+<span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://connect.tech/speakers.html){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
+<span class="conferences-ref">Date:</span> October 20th, 2016
+
+<span class="conferences-ref">Talk:</span> [Building a Progressive Web App with Angular 2](http://connect.tech/speakers.html){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
+<span class="conferences-ref">Date:</span> October 20th, 2016
+
+<span class="conferences-ref">Talk:</span> [Scaling Large Angular 1 Apps](http://connect.tech/speakers.html){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
+<span class="conferences-ref">Date:</span> October 20th, 2016
 
 
 <br>
 
 ## Past talks & workshops
+<hr>
+
+#### NDC Sydney
+<span class="conferences-ref">Talk:</span> [Blazing fast CSS3 Transitions](http://ndcsydney.com/talk/blazing-fast-css3-animations/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Sydney, Australia  
+<span class="conferences-ref">Date:</span> August 5th, 2016
+
 <hr>
 
 #### Le Wagon Lisbon
@@ -94,7 +109,7 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 #### Northeast PHP
 
 <span class="conferences-ref">Talk:</span> [Kickstarting a Laravel app - modern techniques & best practices](http://2015.northeastphp.org/session/kickstarting-a-laravel-application-using-modern-techniques-and-common-best-practices/){:target="_blank"}  
-<span class="conferences-ref">Location:</span> Boston, Massachusetts  
+<span class="conferences-ref">Location:</span> Boston, Massachusetts, United States  
 <span class="conferences-ref">Date:</span> August 22nd, 2015
 
 <hr>
