@@ -10,6 +10,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
+#### Bulgaria PHP
+<span class="conferences-ref">Talk:</span> [Blazing Fast CSS3 transitions](http://www.bgphp.org/speakers/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Sofia, Bulgaria  
+<span class="conferences-ref">Date:</span> October 9th, 2016
+
+<hr>
+
 #### Connect.Tech
 <span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://connect.tech/speakers.html){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
 <span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
