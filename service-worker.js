@@ -29,7 +29,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["2016/03/08/laravel-angular-3-1/index.html","ac9a3ce4dacddf04fe2d3a7e7595fe2b"],["2016/03/13/screencast-tutorial/index.html","e62e1d5a4eab1eb1eb8ffff2b2a849cb"],["2016/03/24/ndc-oslo-angular/index.html","b9abbf9c54637b22f907d055f18d1296"],["2016/03/27/laravel-response-macros-api/index.html","afe7d21d87c5503991359a51c3827b7c"],["2016/04/05/angular-error-interceptor/index.html","7f16eda616d686b8bf187acf7825459d"],["2016/04/17/story-laravel-angular-starter/index.html","f719e597dcb8ccacfe57db2951ff31d2"],["about/index.html","0626a0cba6cfd7b5d4f70661ff94699b"],["archive/index.html","71d7254a8ad6539a0fe2f3b043c7ca3f"],["conferences/index.html","74eceadc82298e7864c49bbb00011d1a"],["index.html","064b4ffc28d8f836645011820d44317e"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
+var PrecacheConfig = [["index.html","7e7e8d87205471bc4b3eaf68bb431366"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-sw-precache-' + (self.registration ? self.registration.scope : '') + '-';
 
