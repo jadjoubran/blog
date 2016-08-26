@@ -4,13 +4,26 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2016-08-24T17:54:21+03:00</updated>
+ <updated>2016-08-26T21:14:05+03:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Blog moved to Medium</title>
+   <link href="http://blog.jadjoubran.io/2016/08/24/moved-to-medium/"/>
+   <updated>2016-08-24T00:00:00+03:00</updated>
+   <id>http://blog.jadjoubran.io/2016/08/24/moved-to-medium</id>
+   <content type="html">&lt;p&gt;I moved the blog to &lt;a href=&quot;https://medium.com/@JoubranJad/&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;.
+You can still see my previous &amp;amp; upcoming conferences on this site.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>The story of Laravel & Angular material starter</title>

@@ -336,6 +336,250 @@ If you like this post, you can
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/03/13/screencast-tutorial/">
+        Laravel & Angular tutorial screencast
+      </a>
+    </h1>
+
+    <span class="post-date">13 Mar 2016</span>
+
+    <p>In this screencast we’ll explore a step by step tutorial to create a form that saves Posts into the database using Angular Material with a Laravel API.</p>
+
+<iframe width="100%" style="max-width:560px;" height="315" src="https://www.youtube.com/embed/_ZWV9KBK2N8" frameborder="0" allowfullscreen=""></iframe>
+
+<hr />
+
+<p>If you like this post, you can
+<a href="https://twitter.com/intent/tweet?url=http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/&amp;text=Laravel &amp; Angular tutorial screencast&amp;via=joubranjad&amp;related=joubranjad" target="_blank">
+  share it with your followers</a>.
+<br />
+<br /></p>
+
+<style>
+    .subscribe-input{
+      border: 0 !important;
+      height: 56px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 4px;
+      padding: 0 20px;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+      background-color: white !important;
+      flex: 1 0 auto;
+      font-family: PT Serif, Helvetica, Arial, sans-serif;
+  }
+
+  #mlb2-1918333,
+  #mlb2-1918333 *,
+  #mlb2-1918333 a:hover,
+  #mlb2-1918333 a:visited,
+  #mlb2-1918333 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    font-size: medium;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#mlb2-1918333 h4 {
+    font-weight: normal;
+}
+
+#mlb2-1918333 .subscribe-form {
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto 0;
+    background-color: #f2f2f2;
+}
+
+#mlb2-1918333 .subscribe-form .form-section {
+    /*float: left;*/
+    /*width: 100%;*/
+}
+
+#mlb2-1918333 .subscribe-form .form-section h4 {
+    margin: 0px 0px 0 0px;
+    text-align: center;
+    padding: 0px!important;
+    color: #27AE60!important;
+    font-size: 20px!important;
+    line-height: 100%;
+}
+
+#mlb2-1918333 .subscribe-form .form-section p {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px!important;
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 15px!important;
+    color: #000000!important;
+    font-size: 12px!important;
+    font-weight: normal !important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
+    margin-right: 5px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox label {
+    color: #000000!important;
+    font-size: 13px!important;
+}
+
+#mlb2-1918333 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #BDC3C7!important;
+    color: #000000!important;
+    background-color: #FFFFFF!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-1918333.ml-subscribe-form button {
+    font-family: PT Serif, Helvetica, Arial, sans-serif;;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    height: 56px !important;
+    background-color: #1565C0!important;
+    color: #FFFFFF!important;
+    font-size: 16px!important;
+    text-align: center !important;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)!important;
+}
+
+#mlb2-1918333.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-1918333.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+@media (max-width: 480px){
+    .subscribe-input{
+        margin-right: 0;
+    }
+    #mlb2-1918333.ml-subscribe-form button {
+        width: 100% !important;
+    }  
+}
+</style>
+
+<div id="mlb2-1918333" class="ml-subscribe-form ml-subscribe-form-1918333" style="margin-top: 15px;">
+    <div class="ml-vertical-align-center">
+        <div class="subscribe-form ml-block-success" style="display:none">
+            <div class="form-section">
+                <h4>Thanks for subscribing. Stay tuned!</h4>
+            </div>
+        </div>
+        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/o2d1h0" data-code="o2d1h0" method="POST" target="_blank">
+            <div class="subscribe-form">
+                <div class="form-section">
+                    <h2 style="font-size: 1.5rem !important;margin-left: 20px;margin-top:10px;margin-bottom:20px;">Stay in the loop</h2>
+                    <p></p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                        <input type="hidden" name="ml-submit" value="1" />
+                        <div class="subscribe-form" id="subs-form" style="display: flex;padding-bottom: 0;padding-top:0;">
+                            <input type="email" name="fields[email]" class="subscribe-input" placeholder="Your e-mail address" value="" />
+                            <button type="submit" class="primary">
+                                Subscribe
+                            </button>
+                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px; margin: 0 auto;" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script>
+            function ml_webform_success_1918333() {
+                jQuery('.ml-subscribe-form-1918333 .ml-block-success').show();
+                jQuery('.ml-subscribe-form-1918333 .ml-block-form').hide();
+            };
+        </script>
+    </div>
+</div>
+<script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.js?v25"></script>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/03/08/laravel-angular-3-1/">
         Laravel Angular Material Starter v3.1
       </a>
