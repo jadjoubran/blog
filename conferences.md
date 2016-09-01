@@ -17,6 +17,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 <hr>
 
+#### ATL AngularJS
+<span class="conferences-ref">Talk:</span> [Building a Progressive Web App with Angular 2](http://connect.tech/speakers.html){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
+<span class="conferences-ref">Date:</span> October 19th, 2016
+
+<hr>
+
 #### Connect.Tech
 <span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://connect.tech/speakers.html){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
 <span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
