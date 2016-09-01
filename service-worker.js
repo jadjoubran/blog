@@ -29,7 +29,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["2016/03/08/laravel-angular-3-1/index.html","396c772a6935ea9e61dfe94280f97900"],["2016/03/13/screencast-tutorial/index.html","5db742dd6361c2c32ad33ba87132af2d"],["2016/03/24/ndc-oslo-angular/index.html","1440a26addf77dbf6013c8d0ab2ab0a1"],["2016/03/27/laravel-response-macros-api/index.html","14509dcc9aa491f0b77b328a831721ef"],["2016/04/05/angular-error-interceptor/index.html","a98461d9718c79794fb6b671efa992ff"],["2016/04/17/story-laravel-angular-starter/index.html","a2727fe502b2b54c3899a7fe4509bbed"],["2016/08/24/moved-to-medium/index.html","d696527a2141c579f2ba73a713008648"],["about/index.html","0626a0cba6cfd7b5d4f70661ff94699b"],["archive/index.html","116105cdf0276bf3ca31f55ab4296ef5"],["conferences/index.html","74eceadc82298e7864c49bbb00011d1a"],["index.html","5871c149954d2e8dc7e7ba11e616952d"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
+var PrecacheConfig = [["index.html","7e7e8d87205471bc4b3eaf68bb431366"],["public/css/hyde.css","29edab71ea32bd45dbdc1c27a23ca580"],["public/css/poole.css","9c0686e6d0dc84eb9e243f4734a519b5"],["public/css/syntax.css","0d3adf5d678394205b2209489843b41e"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-sw-precache-' + (self.registration ? self.registration.scope : '') + '-';
 
