@@ -10,13 +10,6 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
-#### Bulgaria PHP
-<span class="conferences-ref">Talk:</span> [Blazing Fast CSS3 transitions](http://www.bgphp.org/speakers/){:target="_blank"}  
-<span class="conferences-ref">Location:</span> Sofia, Bulgaria  
-<span class="conferences-ref">Date:</span> October 9th, 2016
-
-<hr>
-
 #### ATL AngularJS
 <span class="conferences-ref">Talk:</span> [Building a Progressive Web App with Angular 2](http://connect.tech/speakers.html){:target="_blank"}   
 <span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
@@ -37,10 +30,29 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <span class="conferences-ref">Location:</span> Atlanta, Georgia, United States  
 <span class="conferences-ref">Date:</span> October 20th, 2016
 
+<hr>
+
+#### NDC London
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndc-london.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> January 20th, 2017
+
+<span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://ndc-london.com/talk/ux-patterns-for-developers/){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> January 20th, 2017
+
+<hr>
 
 <br>
 
 ## Past talks & workshops
+<hr>
+
+#### Bulgaria PHP
+<span class="conferences-ref">Talk:</span> [Blazing Fast CSS3 transitions](http://www.bgphp.org/speakers/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Sofia, Bulgaria  
+<span class="conferences-ref">Date:</span> October 9th, 2016
+
 <hr>
 
 #### NDC Sydney
