@@ -343,7 +343,7 @@ If you like this post, you can
 <p>Consistency is one of the most important aspects to consider when building an <strong>API</strong>.
 You often find yourself returning 2 types of responses; one for success and one for errors.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">PostsController</span>
 <span class="p">{</span>
@@ -381,7 +381,7 @@ allow you to define a macro that can be called on the <code class="highlighter-r
 
 <p>We will create a new <code class="highlighter-rouge">ResponseMacroServiceProvider</code> and define a <code class="highlighter-rouge">success</code> and <code class="highlighter-rouge">error</code> macros inside the <code class="highlighter-rouge">boot</code> function:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">ResponseMacroServiceProvider</span> <span class="k">extends</span> <span class="nx">ServiceProvider</span>
 <span class="p">{</span>
@@ -407,7 +407,7 @@ allow you to define a macro that can be called on the <code class="highlighter-r
 <p>We also need to add this ServiceProvider to the <strong>providers</strong> array in <code class="highlighter-rouge">config/app.php</code>.<br />
 So now we can refactor the previous code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
 <span class="k">class</span> <span class="nc">PostsController</span>
 <span class="p">{</span>
