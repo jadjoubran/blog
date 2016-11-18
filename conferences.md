@@ -10,6 +10,35 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
+#### Frontend Revolution
+<span class="conferences-ref">Talk:</span> [Building progressive web apps with Angular 2](http://www.meetup.com/Frontend-Developer-Meetup-Amsterdam/events/235149104/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Amsterdam, Netherlands  
+<span class="conferences-ref">Date:</span> November 24th, 2016
+
+<hr>
+
+#### Madrid JS
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://www.meetup.com/madridjs/events/235184483/?eventId=235184483http://www.meetup.com/madridjs/events/235184483/?eventId=235184483){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Madrid, Spain  
+<span class="conferences-ref">Date:</span> November 30th, 2016
+
+<hr>
+
+#### Valencia JS
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](https://www.meetup.com/ValenciaJS/events/235599502/?eventId=235599502){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Valencia, Spain  
+<span class="conferences-ref">Date:</span> December 7th, 2016
+
+<hr>
+
+#### AngularBeers Cinema (Sponsored by ionic)
+<span class="conferences-ref">Talk:</span> [Building progressive web apps with Angular 2](https://www.meetup.com/AngularJS-Beers/events/235196315/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Barcelona, Spain  
+<span class="conferences-ref">Date:</span> December 15th, 2016
+
+<hr>
+
+
 #### NDC London
 <span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndc-london.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}   
 <span class="conferences-ref">Location:</span> London, United Kingdom  
