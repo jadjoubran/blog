@@ -21,6 +21,17 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 <hr>
 
+#### JazzCon
+<span class="conferences-ref">Workshop:</span> [Progressive Web Apps from scratch](http://jazzcon.tech/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> New Orleans, Louisiana  
+<span class="conferences-ref">Date:</span> March 22th, 2017
+
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://jazzcon.tech/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> New Orleans, Louisiana  
+<span class="conferences-ref">Date:</span> March 24th, 2017
+
+<hr>
+
 <br>
 
 ## Past talks & workshops
