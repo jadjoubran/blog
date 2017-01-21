@@ -4,7 +4,7 @@
  <title>Jad Joubran</title>
  <link href="http://blog.jadjoubran.io/atom.xml" rel="self"/>
  <link href="http://blog.jadjoubran.io/"/>
- <updated>2017-01-17T21:36:55+02:00</updated>
+ <updated>2017-01-21T20:28:58+00:00</updated>
  <id>http://blog.jadjoubran.io</id>
  <author>
    <name>Jad Joubran</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Blog moved to Medium</title>
    <link href="http://blog.jadjoubran.io/2016/08/24/moved-to-medium/"/>
-   <updated>2016-08-24T00:00:00+03:00</updated>
+   <updated>2016-08-24T00:00:00+01:00</updated>
    <id>http://blog.jadjoubran.io/2016/08/24/moved-to-medium</id>
    <content type="html">&lt;p&gt;I moved the blog to &lt;a href=&quot;https://medium.com/@JoubranJad/&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;.
 You can still see my previous &amp;amp; upcoming conferences on this site.&lt;/p&gt;
@@ -28,7 +28,7 @@ You can still see my previous &amp;amp; upcoming conferences on this site.&lt;/p
  <entry>
    <title>The story of Laravel & Angular material starter</title>
    <link href="http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter/"/>
-   <updated>2016-04-17T00:00:00+03:00</updated>
+   <updated>2016-04-17T00:00:00+01:00</updated>
    <id>http://blog.jadjoubran.io/2016/04/17/story-laravel-angular-starter</id>
    <content type="html">&lt;p&gt;Today I’m writing because &lt;strong&gt;Laravel &amp;amp; Angular material starter&lt;/strong&gt; has reached &lt;strong&gt;1,000 stars&lt;/strong&gt; on github!&lt;/p&gt;
 &lt;iframe class=&quot;DemoHeader-github&quot; src=&quot;https://ghbtns.com/github-btn.html?user=jadjoubran&amp;amp;repo=laravel5-angular-material-starter&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;160px&quot; height=&quot;30px&quot;&gt;&lt;/iframe&gt;
@@ -312,7 +312,7 @@ I noticed that open sourcing this setup would benefit a lot of users.&lt;/p&gt;
  <entry>
    <title>Angular error interceptors</title>
    <link href="http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor/"/>
-   <updated>2016-04-05T00:00:00+03:00</updated>
+   <updated>2016-04-05T00:00:00+01:00</updated>
    <id>http://blog.jadjoubran.io/2016/04/05/angular-error-interceptor</id>
    <content type="html">&lt;p&gt;After introducing &lt;a href=&quot;/2016/03/27/laravel-response-macros-api/&quot; target=&quot;_blank&quot;&gt;response macros for Laravel APIs&lt;/a&gt;, it’s time to keep our angular code DRY.&lt;/p&gt;
 
@@ -633,7 +633,7 @@ That’s easy. Just pass in your custom error handler as the second argument for
  <entry>
    <title>Laravel Response Macros for APIs</title>
    <link href="http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api/"/>
-   <updated>2016-03-27T00:00:00+02:00</updated>
+   <updated>2016-03-27T00:00:00+00:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/27/laravel-response-macros-api</id>
    <content type="html">&lt;p&gt;I would like to show you a use case for response macros when building an API with Laravel.&lt;/p&gt;
 
@@ -965,7 +965,7 @@ This means your front-end API calls will expect a consistent response.&lt;/p&gt;
  <entry>
    <title>NDC Oslo - Scaling large Angular apps</title>
    <link href="http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular/"/>
-   <updated>2016-03-24T00:00:00+02:00</updated>
+   <updated>2016-03-24T00:00:00+00:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/24/ndc-oslo-angular</id>
    <content type="html">&lt;p&gt;I’m excited to announce that I’ll be presenting &lt;strong&gt;&lt;a href=&quot;http://ndcoslo.com/talk/scaling-large-angular-apps/&quot; target=&quot;_blank&quot;&gt;Scaling Large Angular Apps&lt;/a&gt;&lt;/strong&gt; in &lt;strong&gt;&lt;a href=&quot;http://ndcoslo.com/&quot; target=&quot;_blank&quot;&gt;NDC Oslo&lt;/a&gt;&lt;/strong&gt; - Norway.&lt;/p&gt;
 
@@ -1215,7 +1215,7 @@ This means your front-end API calls will expect a consistent response.&lt;/p&gt;
  <entry>
    <title>Laravel & Angular tutorial screencast</title>
    <link href="http://blog.jadjoubran.io/2016/03/13/screencast-tutorial/"/>
-   <updated>2016-03-13T00:00:00+02:00</updated>
+   <updated>2016-03-13T00:00:00+00:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/13/screencast-tutorial</id>
    <content type="html">&lt;p&gt;In this screencast we’ll explore a step by step tutorial to create a form that saves Posts into the database using Angular Material with a Laravel API.&lt;/p&gt;
 
@@ -1455,7 +1455,7 @@ This means your front-end API calls will expect a consistent response.&lt;/p&gt;
  <entry>
    <title>Laravel Angular Material Starter v3.1</title>
    <link href="http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1/"/>
-   <updated>2016-03-08T00:00:00+02:00</updated>
+   <updated>2016-03-08T00:00:00+00:00</updated>
    <id>http://blog.jadjoubran.io/2016/03/08/laravel-angular-3-1</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://laravel-angular.io&quot; target=&quot;_blank&quot;&gt;Laravel Angular Material Starter&lt;/a&gt; has recently hit version 3.1&lt;br /&gt;
 I would like to thank all the contributors and users for making it possible.&lt;/p&gt;
