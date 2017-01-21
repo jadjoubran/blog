@@ -7,6 +7,20 @@ Below you can find the private workshops that I've given for companies. Company 
 
 <br>
 
+#### Introduction to Angular (2)
+Introduction to the main concepts of Angular, including ES2015, TypeScript & Angular CLI   
+<span class="conferences-ref">Prerequisites:</span> basic knowledge of HTMl, CSS & JavaScript  
+<span class="conferences-ref">Date:</span> Jan 17th, 2017
+
+<hr>
+
+#### Progressive web apps
+Progressive web apps from scratch workshop  
+<span class="conferences-ref">Prerequisites:</span> basic knowledge of HTMl, CSS & JavaScript  
+<span class="conferences-ref">Date:</span> Jan 16th, 2017
+
+<hr>
+
 #### Angular Material - Advanced
 Advanced use cases for Angular Material, including the Layout system & advanced components.  
 <span class="conferences-ref">Prerequisites:</span> knowledge in Angular & Angular Material  

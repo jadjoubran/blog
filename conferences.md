@@ -10,17 +10,6 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
-#### NDC London
-<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndc-london.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}   
-<span class="conferences-ref">Location:</span> London, United Kingdom  
-<span class="conferences-ref">Date:</span> January 20th, 2017
-
-<span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://ndc-london.com/talk/ux-patterns-for-developers/){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
-<span class="conferences-ref">Location:</span> London, United Kingdom  
-<span class="conferences-ref">Date:</span> January 20th, 2017
-
-<hr>
-
 #### JazzCon
 <span class="conferences-ref">Workshop:</span> [Progressive Web Apps from scratch](http://jazzcon.tech/){:target="_blank"}   
 <span class="conferences-ref">Location:</span> New Orleans, Louisiana  
@@ -36,6 +25,18 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 ## Past talks & workshops
 <hr>
+
+#### NDC London
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndc-london.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> January 20th, 2017
+
+<span class="conferences-ref">Talk:</span> [UX Patterns for developers](http://ndc-london.com/talk/ux-patterns-for-developers/){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> January 20th, 2017
+
+<hr>
+
 
 #### AngularBeers Cinema (Sponsored by ionic)
 <span class="conferences-ref">Talk:</span> [Building progressive web apps with Angular 2](https://www.meetup.com/AngularJS-Beers/events/235196315/){:target="_blank"}   
