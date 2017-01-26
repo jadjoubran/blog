@@ -10,6 +10,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
+#### Bucharest JS
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](https://www.meetup.com/BucharestJS/events/237215862/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Bucharest, Romania  
+<span class="conferences-ref">Date:</span> February 21st, 2017
+
+<hr>
+
 #### JazzCon
 <span class="conferences-ref">Workshop:</span> [Progressive Web Apps from scratch](http://jazzcon.tech/){:target="_blank"}   
 <span class="conferences-ref">Location:</span> New Orleans, Louisiana  
