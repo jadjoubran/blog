@@ -10,27 +10,34 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
-#### Bucharest JS
-<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](https://www.meetup.com/BucharestJS/events/237215862/){:target="_blank"}   
-<span class="conferences-ref">Location:</span> Bucharest, Romania  
-<span class="conferences-ref">Date:</span> February 21st, 2017
+#### EnterJS
+<span class="conferences-ref">Talk:</span> [Web APIs you must know about in 2017](https://www.enterjs.de/abstracts#web-ap-is-you-must-know-about-in-2017){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Darmstadt, Germany  
+<span class="conferences-ref">Date:</span> June 22nd, 2017
+
+<span class="conferences-ref">Talk:</span> [UX patterns for web developers](https://www.enterjs.de/abstracts#ux-patterns-for-web-developers){:target="_blank"}  (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})    
+<span class="conferences-ref">Location:</span> Darmstadt, Germany  
+<span class="conferences-ref">Date:</span> June 22nd, 2017
 
 <hr>
 
-#### JazzCon
-<span class="conferences-ref">Workshop:</span> [Progressive Web Apps from scratch](http://jazzcon.tech/){:target="_blank"}   
-<span class="conferences-ref">Location:</span> New Orleans, Louisiana  
-<span class="conferences-ref">Date:</span> March 22th, 2017
-
-<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://jazzcon.tech/){:target="_blank"}  
-<span class="conferences-ref">Location:</span> New Orleans, Louisiana  
-<span class="conferences-ref">Date:</span> March 24th, 2017
+#### Developer Week 2017
+<span class="conferences-ref">Talk:</span> [The (Awesome) future of Web Apps](http://www.developer-week.de/Programm/Veranstaltung/(event)/21522){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Nürnberg, Germany  
+<span class="conferences-ref">Date:</span> June 27nd, 2017
 
 <hr>
 
 <br>
 
 ## Past talks & workshops
+<hr>
+
+#### Bucharest JS
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](https://www.meetup.com/BucharestJS/events/237215862/){:target="_blank"}   
+<span class="conferences-ref">Location:</span> Bucharest, Romania  
+<span class="conferences-ref">Date:</span> February 21st, 2017
+
 <hr>
 
 #### NDC London
