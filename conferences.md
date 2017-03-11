@@ -10,6 +10,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
+#### JsDay ES
+<span class="conferences-ref">Talk:</span> [UX patterns for web developers](http://2017.jsday.es/#speakers){:target="_blank"}  (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> Madrid, Spain  
+<span class="conferences-ref">Date:</span> May 13th, 2017  
+
+<hr>
+
 #### NDC Oslo
 <span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndcoslo.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}  
 <span class="conferences-ref">Location:</span> Oslo, Norway  
