@@ -42,6 +42,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 <hr>
 
+#### Dutch PHP Conference 2017
+<span class="conferences-ref">Talk:</span> [The (Awesome) future of Web Apps](http://www.phpconference.nl){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Amsterdam, Netherlands  
+<span class="conferences-ref">Date:</span> June 30th, 2017  
+
+<hr>
+
 <br>
 
 ## Past talks & workshops
