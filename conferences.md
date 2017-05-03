@@ -49,6 +49,14 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 <hr>
 
+#### NDC Sydney
+<span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndcsydney.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}  
+<span class="conferences-ref">Location:</span> Sydney, Australia  
+<span class="conferences-ref">Date:</span> August 16th, 2017  
+
+<span class="conferences-ref">Talk:</span> [UX Patterns for web developers](http://ndcsydney.com/talk/ux-patterns-for-web-developers/){:target="_blank"} (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> Sydney, Australia  
+<span class="conferences-ref">Date:</span> August 17th, 2017  
 <br>
 
 ## Past talks & workshops
