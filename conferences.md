@@ -10,13 +10,6 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 ## Upcoming talks & workshops
 <hr>
 
-#### JsDay ES
-<span class="conferences-ref">Talk:</span> [UX patterns for web developers](http://2017.jsday.es/#speakers){:target="_blank"}  (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
-<span class="conferences-ref">Location:</span> Madrid, Spain  
-<span class="conferences-ref">Date:</span> May 13th, 2017  
-
-<hr>
-
 #### NDC Oslo
 <span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndcoslo.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}  
 <span class="conferences-ref">Location:</span> Oslo, Norway  
@@ -49,6 +42,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 
 <hr>
 
+#### FullStack London 2017
+<span class="conferences-ref">Talk:</span> [UX patterns for web developers](https://skillsmatter.com/conferences/8264-fullstack-2017-the-conference-on-javascript-node-and-internet-of-things?tc=b35c6d#program){:target="_blank"}  (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> London, United Kingdom  
+<span class="conferences-ref">Date:</span> July 12th, 2017  
+
+<hr>
+
 #### NDC Sydney
 <span class="conferences-ref">Talk:</span> [The (Awesome) Future of Web Apps](http://ndcsydney.com/talk/the-awesome-future-of-web-apps/){:target="_blank"}  
 <span class="conferences-ref">Location:</span> Sydney, Australia  
@@ -60,6 +60,13 @@ Below you can find the conferences where I've been invited to speak. I've enjoye
 <br>
 
 ## Past talks & workshops
+<hr>
+
+#### JsDay ES
+<span class="conferences-ref">Talk:</span> [UX patterns for web developers](http://2017.jsday.es/#speakers){:target="_blank"}  (co-speaker [Nicole Saidy](https://nicolesaidy.com/){:target="_blank"})  
+<span class="conferences-ref">Location:</span> Madrid, Spain  
+<span class="conferences-ref">Date:</span> May 13th, 2017  
+
 <hr>
 
 #### Bucharest JS
